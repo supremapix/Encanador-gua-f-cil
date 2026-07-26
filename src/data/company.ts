@@ -23,18 +23,21 @@ export const COMPANY_DATA = {
   heroImages: [
     {
       url: "https://img.aguafacil.app.br/slider-desentope-cic-cwb.jpg",
+      mobileUrl: "https://img.aguafacil.app.br/slider-mobile-cic-agua-facil.jpg",
       alt: "Atendimento de encanador especializado na CIC e em toda Curitiba",
       title: "Encanador Especializado na CIC e Curitiba",
       subtitle: "Soluções hidráulicas rápidas e eficientes para sua residência ou comércio"
     },
     {
       url: "https://img.aguafacil.app.br/slider-desentope-cic.jpg",
+      mobileUrl: "https://img.aguafacil.app.br/slider-mobile-cic.jpg",
       alt: "Serviços de encanamento e manutenção hidráulica na Cidade Industrial de Curitiba",
       title: "Manutenção e Reparos Hidráulicos",
       subtitle: "Diagnóstico e conserto de vazamentos, torneiras e tubulações com transparência"
     },
     {
       url: "https://img.aguafacil.app.br/slider-desentope.jpg",
+      mobileUrl: "https://img.aguafacil.app.br/slider-mobile-cic-agua-facil.jpg",
       alt: "Atendimento técnico de encanador em Curitiba e Região Metropolitana",
       title: "Atendimento em Curitiba e Região Metropolitana",
       subtitle: "Deslocamento técnico para bairros e cidades do entorno. Solicite orçamento pelo WhatsApp"
