@@ -9,7 +9,7 @@ interface EnhancedSEOProps {
   type?: 'website' | 'article';
   ogImage?: string;
   noindex?: boolean;
-  breadcrumbs?: { name: string; item: string }[];
+  breadcrumbs?: ({ name: string; item: string } | { label: string; href: string })[];
   faqItems?: { question: string; answer: string }[];
   includeVideoSchema?: boolean;
 }
@@ -66,12 +66,16 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const breadcrumbSchema = breadcrumbs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((b, idx) => ({
-      "@type": "ListItem",
-      "position": idx + 1,
-      "name": b.name,
-      "item": b.item.startsWith('http') ? b.item : `${COMPANY_DATA.baseUrl}${b.item}`
-    }))
+    "itemListElement": breadcrumbs.map((b, idx) => {
+      const name = 'name' in b ? b.name : b.label;
+      const item = 'item' in b ? b.item : b.href;
+      return {
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": name,
+        "item": item.startsWith('http') ? item : `${COMPANY_DATA.baseUrl}${item}`
+      };
+    })
   } : null;
 
   // FAQ schema

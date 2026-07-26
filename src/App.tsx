@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/Home';
 import { ServicesIndexPage } from './pages/ServicesIndex';
@@ -25,22 +26,66 @@ import { SERVICE_CITIES } from './data/serviceCities';
 import { COMPANY_DATA } from './data/company';
 
 export const App: React.FC = () => {
-  const [currentPath, setCurrentPath] = useState(() => window.location.pathname);
+  const [currentPath, setCurrentPath] = useState(() => window.location.pathname + window.location.search + window.location.hash);
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(window.location.pathname + window.location.search + window.location.hash);
     };
 
     // Handle internal link clicks without full reload for smooth SPA experience
     const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a');
-      if (target && target.getAttribute('href')?.startsWith('/') && target.getAttribute('target') !== '_blank') {
-        const href = target.getAttribute('href')!;
+      if (!target) return;
+
+      const href = target.getAttribute('href');
+      if (!href) return;
+
+      // Ignore external or specialized link protocols
+      if (
+        target.getAttribute('target') === '_blank' ||
+        href.startsWith('http://') ||
+        href.startsWith('https://') ||
+        href.startsWith('tel:') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('whatsapp:')
+      ) {
+        return;
+      }
+
+      // Handle pure page anchor links like #contato
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        return;
+      }
+
+      // Handle internal SPA navigation
+      if (href.startsWith('/')) {
         e.preventDefault();
         window.history.pushState({}, '', href);
         setCurrentPath(href);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        try {
+          const url = new URL(href, window.location.origin);
+          if (url.hash) {
+            setTimeout(() => {
+              const element = document.querySelector(url.hash);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }, 50);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        } catch {
+          window.scrollTo(0, 0);
+        }
       }
     };
 
@@ -54,10 +99,14 @@ export const App: React.FC = () => {
   }, []);
 
   const renderContent = () => {
-    const path = currentPath.replace(/\/$/, '') || '/';
+    // Normalize path by stripping search params, hash, trailing slash and converting to lowercase
+    let path = (currentPath || '/').split('?')[0].split('#')[0].toLowerCase();
+    if (path.length > 1 && path.endsWith('/')) {
+      path = path.slice(0, -1);
+    }
 
     // Static Pages
-    if (path === '/') return <HomePage />;
+    if (path === '' || path === '/') return <HomePage />;
     if (path === '/servicos') return <ServicesIndexPage />;
     if (path === '/encanador-curitiba') return <CuritibaPage />;
     if (path === '/encanador-cic') return <CicPage />;
@@ -74,14 +123,14 @@ export const App: React.FC = () => {
     // Dynamic Service Pages
     if (path.startsWith('/servicos/')) {
       const slug = path.replace('/servicos/', '');
-      const service = PLUMBING_SERVICES.find((s) => s.slug === slug);
+      const service = PLUMBING_SERVICES.find((s) => s.slug.toLowerCase() === slug);
       if (service) return <ServiceDetailPage service={service} />;
     }
 
     // Dynamic Bairro Pages (75 Bairros)
     if (path.startsWith('/bairros/')) {
       const slug = path.replace('/bairros/', '');
-      const bairro = CURITIBA_NEIGHBORHOODS.find((b) => b.slug === slug);
+      const bairro = CURITIBA_NEIGHBORHOODS.find((b) => b.slug.toLowerCase() === slug);
       if (bairro) {
         return (
           <LocationPage
@@ -122,7 +171,7 @@ export const App: React.FC = () => {
     // Dynamic Vila / Popular Region Pages
     if (path.startsWith('/regioes/')) {
       const slug = path.replace('/regioes/', '');
-      const popular = POPULAR_AREAS.find((p) => p.slug === slug);
+      const popular = POPULAR_AREAS.find((p) => p.slug.toLowerCase() === slug);
       if (popular) {
         return (
           <LocationPage
@@ -157,7 +206,7 @@ export const App: React.FC = () => {
     // Dynamic City Pages (15 RMC Cities)
     if (path.startsWith('/cidades/')) {
       const slug = path.replace('/cidades/', '');
-      const city = SERVICE_CITIES.find((c) => c.slug === slug);
+      const city = SERVICE_CITIES.find((c) => c.slug.toLowerCase() === slug);
       if (city) {
         return (
           <LocationPage
@@ -193,9 +242,11 @@ export const App: React.FC = () => {
   };
 
   return (
-    <HelmetProvider>
-      <Layout>{renderContent()}</Layout>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Layout>{renderContent()}</Layout>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 
