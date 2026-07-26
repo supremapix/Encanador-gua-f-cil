@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <!-- Water Drop Gradient -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <!-- Wrench Gold Gradient -->
+    <linearGradient id="wrenchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base (Google Favicon 48x48+ multiple) -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  <rect x="12" y="12" width="488" height="488" rx="98" fill="none" stroke="#38bdf8" stroke-width="12" stroke-opacity="0.4"/>
+
+  <!-- Water Drop Shadow -->
+  <path d="M256 64 C256 64 128 240 128 336 A128 128 0 0 0 384 336 C384 240 256 64 256 64 Z" fill="#000000" opacity="0.25" transform="translate(0, 12)"/>
+
+  <!-- Main Water Drop -->
+  <path d="M256 64 C256 64 128 240 128 336 A128 128 0 0 0 384 336 C384 240 256 64 256 64 Z" fill="url(#dropGrad)"/>
+
+  <!-- Water Drop Gloss Highlight -->
+  <path d="M256 96 C256 96 160 236 160 320 A96 96 0 0 1 208 248 C220 200 256 96 256 96 Z" fill="#ffffff" opacity="0.35"/>
+
+  <!-- Plumber Wrench Icon Overlay -->
+  <g transform="translate(256, 330) rotate(-45) translate(-100, -100)">
+    <path d="M140 20 C100 20 70 50 70 90 C70 108 77 124 88 137 L20 205 C10 215 10 230 20 240 C30 250 45 250 55 240 L123 172 C136 183 152 190 170 190 C210 190 240 160 240 120 C240 90 220 70 190 70 L190 100 L160 100 L160 40 L140 20 Z" fill="url(#wrenchGrad)" stroke="#854d0e" stroke-width="4"/>
+  </g>
+
+  <!-- 24H Badge -->
+  <g transform="translate(320, 360)">
+    <rect width="140" height="70" rx="20" fill="#dc2626" stroke="#ffffff" stroke-width="6"/>
+    <text x="70" y="48" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="40" fill="#ffffff" text-anchor="middle">24H</text>
+  </g>
+</svg>
