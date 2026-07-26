@@ -1,0 +1,6 @@
+{
+  "name": "Encanador Água Fácil 24H",
+  "description": "Site oficial da Encanador Água Fácil 24H - Serviços de encanamento, reparos hidráulicos e atendimento em Curitiba e região metropolitana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
