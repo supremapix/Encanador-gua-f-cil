@@ -48,16 +48,20 @@ export const FloatingActions: React.FC = () => {
     });
   };
 
+  const defaultMobileImage = 'https://img.aguafacil.app.br/slider-mobile-cic-agua-facil.jpg';
+  const encodedUrl = encodeURIComponent(currentUrl || 'https://www.encanador.servicosnobairro.com.br');
+  const encodedTitle = encodeURIComponent(`Encanador 24H em Curitiba e Região: ${pageTitle}`);
+  const encodedMedia = encodeURIComponent(defaultMobileImage);
+
   const handleCopyLink = () => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard.writeText(currentUrl || window.location.href);
+      const url = currentUrl || window.location.href;
+      const shareText = `Estou indicando o melhor encanador 24H de Curitiba e Região - Água Fácil: ${pageTitle} (${url})`;
+      navigator.clipboard.writeText(shareText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
   };
-
-  const encodedUrl = encodeURIComponent(currentUrl || 'https://www.encanador.servicosnobairro.com.br');
-  const encodedTitle = encodeURIComponent(`Encanador em Curitiba e Região: ${pageTitle}`);
 
   // Social Share Platforms
   const sharePlatforms = [
@@ -98,7 +102,7 @@ export const FloatingActions: React.FC = () => {
       name: 'Pinterest',
       color: 'bg-red-600 hover:bg-red-500 text-white',
       shadow: 'shadow-red-500/30',
-      url: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
+      url: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodedMedia}&description=${encodedTitle}`,
       icon: (
         <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
           <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
