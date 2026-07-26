@@ -1,0 +1,32 @@
+# Encanador Água Fácil 24H - Curitiba e Região Metropolitana
+
+> Serviços profissionais de encanador, manutenção hidráulica, reparo de vazamentos, troca de torneiras e registros em Curitiba (todos os 75 bairros) e Região Metropolitana. Sede na Cidade Industrial de Curitiba (CIC).
+
+## Informações do Estabelecimento
+- **Razão Social / Nome:** Encanador Água Fácil 24H
+- **Endereço da Sede:** Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba/PR (CEP: 81450-370)
+- **Telefone:** (41) 99569-4912
+- **WhatsApp 24h:** (41) 99569-4912 (https://wa.me/5541995694912)
+- **Horário de Funcionamento:** 24 Horas / Todos os dias da semana
+- **Valores e Promoções:** Atendimento a partir de R$ 50,00 chamando hoje.
+- **Domínio Oficial:** https://www.encanador.servicosnobairro.com.br
+
+## Serviços Oferecidos
+- [Conserto e Reparo de Vazamentos](https://www.encanador.servicosnobairro.com.br/servicos/reparo-vazamentos): Localização visual e reparo ágil de vazamentos em tubulações, torneiras, caixas d'água e registros.
+- [Troca e Conserto de Torneiras, Registros e Válvulas](https://www.encanador.servicosnobairro.com.br/servicos/troca-torneiras-registros): Instalação, reparo e vedação de torneiras, registros gaveta/pressão, válvulas Hydra e reparos.
+- [Manutenção Hidráulica Residencial e Comercial](https://www.encanador.servicosnobairro.com.br/servicos/manutencao-hidraulica): Revisão geral, adequação de pressão e manutenção preventiva e corretiva para imóveis.
+- [Instalação de Louças Sanitaristas, Pias e Metais](https://www.encanador.servicosnobairro.com.br/servicos/instalacao-loucas-metais): Montagem e instalação de vasos sanitários, pias, tanques, cubas e acessórios hidráulicos.
+- [Desentupimento Emergencial de Pias e Ralos](https://www.encanador.servicosnobairro.com.br/servicos/desentupimento-emergencial): Remoção de obstruções em pias de cozinha, lavatórios, ralos de banheiro e sifões.
+- [Substituição e Reparo de Tubulações e Conexões](https://www.encanador.servicosnobairro.com.br/servicos/troca-tubulacoes): Troca de trechos de canos antigos, reparos em conexões quebradas e adequação de redes.
+- [Inspeção e Diagnóstico Hidráulico Preventivo](https://www.encanador.servicosnobairro.com.br/servicos/inspecao-diagnostico): Avaliação completa de instalações antes de reformas, compra de imóveis ou identificação de falhas.
+
+## Principais Páginas e Cobertura
+- [Encanador na CIC](https://www.encanador.servicosnobairro.com.br/encanador-cic): Atendimento rápido saindo da sede na Rua das Águias, 320.
+- [Encanador em Curitiba](https://www.encanador.servicosnobairro.com.br/encanador-curitiba): Cobertura técnica nos 75 bairros oficiais de Curitiba.
+- [Bairros de Curitiba](https://www.encanador.servicosnobairro.com.br/bairros): Índice completo dos 75 bairros oficiais.
+- [Vilas e Regiões Populares](https://www.encanador.servicosnobairro.com.br/regioes): Atendimento em vilas como Vila Sandra, Vila Verde, Caiuá e Vitória Régia.
+- [Cidades Atendidas na RMC](https://www.encanador.servicosnobairro.com.br/cidades): Atendimento em 15 cidades da Região Metropolitana (São José dos Pinhais, Pinhais, Araucária, Colombo, etc.).
+
+## Links e Arquivos Complementares
+- [Sitemap XML](https://www.encanador.servicosnobairro.com.br/sitemap.xml): Arquivo completo do mapa do site para crawlers.
+- [LLMs Full Text](https://www.encanador.servicosnobairro.com.br/llms-full.txt): Documentação técnica e descritivo completo de todas as páginas para IAs.
