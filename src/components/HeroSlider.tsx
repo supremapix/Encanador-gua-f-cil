@@ -74,7 +74,7 @@ export const HeroSlider: React.FC = () => {
     >
       {/* Slider Frame showing purely images without text overlays */}
       <div
-        className="relative w-full overflow-hidden bg-slate-950 flex items-center justify-center h-[400px] xs:h-[460px] sm:h-[480px] md:h-[540px] lg:h-[620px] xl:h-[680px]"
+        className="relative w-full overflow-hidden bg-slate-950 flex items-center justify-center aspect-[2/3] sm:aspect-none sm:h-[480px] md:h-[540px] lg:h-[620px] xl:h-[680px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
@@ -95,7 +95,7 @@ export const HeroSlider: React.FC = () => {
               {/* Blurred backdrop for ultra-wide screens to eliminate harsh cuts */}
               <div
                 className="absolute inset-0 bg-cover bg-center blur-2xl opacity-30 scale-110 pointer-events-none"
-                style={{ backgroundImage: `url(${img.url})` }}
+                style={{ backgroundImage: `url(${img.mobileUrl || img.url})` }}
               />
 
               <picture className="relative z-10 w-full h-full flex items-center justify-center">
@@ -108,7 +108,7 @@ export const HeroSlider: React.FC = () => {
                   fetchPriority={idx === 0 ? 'high' : 'auto'}
                   loading={idx === 0 ? 'eager' : 'lazy'}
                   decoding={idx === 0 ? 'sync' : 'async'}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-contain sm:object-cover object-center"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     if (img.mobileUrl && target.src !== img.url) {
@@ -142,14 +142,14 @@ export const HeroSlider: React.FC = () => {
         </button>
 
         {/* Slide Indicator Dots */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-700/80 backdrop-blur-sm">
+        <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/80 backdrop-blur-md shadow-lg">
           {images.map((_, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => handleSelectSlide(idx)}
               className={`h-2 rounded-full transition-all ${
-                idx === currentIndex ? 'w-7 bg-cyan-400' : 'w-2 bg-white/50 hover:bg-white/80'
+                idx === currentIndex ? 'w-6 sm:w-7 bg-cyan-400' : 'w-2 bg-white/50 hover:bg-white/80'
               }`}
               aria-label={`Ir para o slide ${idx + 1}`}
             />
