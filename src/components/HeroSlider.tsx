@@ -74,7 +74,7 @@ export const HeroSlider: React.FC = () => {
     >
       {/* Slider Frame showing purely images without text overlays */}
       <div
-        className="relative w-full overflow-hidden bg-slate-950 flex items-center justify-center aspect-[4/5] sm:aspect-auto sm:min-h-[480px] md:min-h-[540px] lg:min-h-[620px]"
+        className="relative w-full overflow-hidden bg-slate-950 flex items-center justify-center h-[400px] xs:h-[460px] sm:h-[480px] md:h-[540px] lg:h-[620px] xl:h-[680px]"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
@@ -92,7 +92,13 @@ export const HeroSlider: React.FC = () => {
               }`}
               aria-hidden={!isActive}
             >
-              <picture className="w-full h-full flex items-center justify-center">
+              {/* Blurred backdrop for ultra-wide screens to eliminate harsh cuts */}
+              <div
+                className="absolute inset-0 bg-cover bg-center blur-2xl opacity-30 scale-110 pointer-events-none"
+                style={{ backgroundImage: `url(${img.url})` }}
+              />
+
+              <picture className="relative z-10 w-full h-full flex items-center justify-center">
                 {img.mobileUrl && (
                   <source media="(max-width: 639px)" srcSet={img.mobileUrl} />
                 )}
@@ -102,7 +108,7 @@ export const HeroSlider: React.FC = () => {
                   fetchPriority={idx === 0 ? 'high' : 'auto'}
                   loading={idx === 0 ? 'eager' : 'lazy'}
                   decoding={idx === 0 ? 'sync' : 'async'}
-                  className="w-full h-full object-contain sm:object-cover object-center"
+                  className="w-full h-full object-cover object-center"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     if (img.mobileUrl && target.src !== img.url) {
