@@ -366,11 +366,8 @@ export const App: React.FC = () => {
       return <ServiceDetailPage service={matchedService} />;
     }
 
-    // Fallback for any unknown / old unmatched route: redirect smoothly to homepage index without 404 error
-    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
-      window.history.replaceState({}, '', '/');
-    }
-    return <HomePage />;
+    // True 404 for completely unmatched routes
+    return <NotFoundPage />;
   };
 
   return (
