@@ -366,7 +366,53 @@ export const App: React.FC = () => {
       return <ServiceDetailPage service={matchedService} />;
     }
 
-    // True 404 for completely unmatched routes
+    // 5. Fallbacks for old/unmatched location or service prefixes
+    if (
+      path.startsWith('/bairro') ||
+      path.startsWith('/bairros') ||
+      path.startsWith('/local') ||
+      path.startsWith('/locais') ||
+      path.startsWith('/atendimento')
+    ) {
+      if (typeof window !== 'undefined' && window.location.pathname !== '/bairros') {
+        window.history.replaceState({}, '', '/bairros');
+      }
+      return <BairrosIndexPage />;
+    }
+
+    if (
+      path.startsWith('/cidade') ||
+      path.startsWith('/cidades') ||
+      path.startsWith('/municipio') ||
+      path.startsWith('/municipios')
+    ) {
+      if (typeof window !== 'undefined' && window.location.pathname !== '/cidades') {
+        window.history.replaceState({}, '', '/cidades');
+      }
+      return <CidadesIndexPage />;
+    }
+
+    if (
+      path.startsWith('/regiao') ||
+      path.startsWith('/regioes') ||
+      path.startsWith('/vila') ||
+      path.startsWith('/vilas') ||
+      path.startsWith('/area')
+    ) {
+      if (typeof window !== 'undefined' && window.location.pathname !== '/regioes') {
+        window.history.replaceState({}, '', '/regioes');
+      }
+      return <RegioesIndexPage />;
+    }
+
+    if (path.startsWith('/servico') || path.startsWith('/servicos')) {
+      if (typeof window !== 'undefined' && window.location.pathname !== '/servicos') {
+        window.history.replaceState({}, '', '/servicos');
+      }
+      return <ServicesIndexPage />;
+    }
+
+    // Unmatched routes render NotFoundPage with redirection info
     return <NotFoundPage />;
   };
 
