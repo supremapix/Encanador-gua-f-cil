@@ -141,7 +141,7 @@ export const LocationSearch: React.FC = () => {
                       <MapPin className="w-4 h-4 text-cyan-600 shrink-0" />
                       <div className="truncate">
                         <a
-                          href={`/bairros/${n.slug}`}
+                          href={`/bairro/${n.slug}`}
                           className="font-bold text-sm text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 truncate block"
                         >
                           {n.name}
@@ -152,7 +152,7 @@ export const LocationSearch: React.FC = () => {
                       </div>
                     </div>
                     <a
-                      href={`/bairros/${n.slug}`}
+                      href={`/bairro/${n.slug}`}
                       className="text-cyan-600 hover:text-cyan-700 dark:text-cyan-400 p-1 rounded-lg group-hover:bg-cyan-50 dark:group-hover:bg-slate-700 shrink-0"
                       title={`Acessar página de encanador no bairro ${n.name}`}
                     >
@@ -203,7 +203,7 @@ export const LocationSearch: React.FC = () => {
                       <Building className="w-4 h-4 text-blue-600 shrink-0" />
                       <div className="truncate">
                         <a
-                          href={`/cidades/${c.slug}`}
+                          href={`/cidade/${c.slug}`}
                           className="font-bold text-sm text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 truncate block"
                         >
                           {c.name}
@@ -214,7 +214,7 @@ export const LocationSearch: React.FC = () => {
                       </div>
                     </div>
                     <a
-                      href={`/cidades/${c.slug}`}
+                      href={`/cidade/${c.slug}`}
                       className="text-blue-600 hover:text-blue-700 dark:text-blue-400 p-1 rounded-lg group-hover:bg-blue-50 dark:group-hover:bg-slate-700 shrink-0"
                       title={`Acessar encanador em ${c.name}`}
                     >

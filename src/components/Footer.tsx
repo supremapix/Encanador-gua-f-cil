@@ -87,19 +87,19 @@ export const Footer: React.FC = () => {
                 <a href="/encanador-cic" className="hover:text-cyan-400 transition-colors font-semibold text-cyan-300">Cidade Industrial de Curitiba (CIC)</a>
               </li>
               <li>
-                <a href="/bairros/agua-verde" className="hover:text-cyan-400 transition-colors">Encanador no Água Verde</a>
+                <a href="/bairro/agua-verde" className="hover:text-cyan-400 transition-colors">Encanador no Água Verde</a>
               </li>
               <li>
-                <a href="/bairros/batel" className="hover:text-cyan-400 transition-colors">Encanador no Batel</a>
+                <a href="/bairro/batel" className="hover:text-cyan-400 transition-colors">Encanador no Batel</a>
               </li>
               <li>
-                <a href="/bairros/portao" className="hover:text-cyan-400 transition-colors">Encanador no Portão</a>
+                <a href="/bairro/portao" className="hover:text-cyan-400 transition-colors">Encanador no Portão</a>
               </li>
               <li>
-                <a href="/bairros/centro" className="hover:text-cyan-400 transition-colors">Encanador no Centro</a>
+                <a href="/bairro/centro" className="hover:text-cyan-400 transition-colors">Encanador no Centro</a>
               </li>
               <li>
-                <a href="/bairros/boqueirao" className="hover:text-cyan-400 transition-colors">Encanador no Boqueirão</a>
+                <a href="/bairro/boqueirao" className="hover:text-cyan-400 transition-colors">Encanador no Boqueirão</a>
               </li>
               <li>
                 <a href="/regioes/vila-sandra" className="hover:text-cyan-400 transition-colors">Vila Sandra (CIC)</a>
@@ -117,16 +117,16 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
               <li>
-                <a href="/cidades/sao-jose-dos-pinhais" className="hover:text-cyan-400 transition-colors">São José dos Pinhais</a>
+                <a href="/cidade/sao-jose-dos-pinhais" className="hover:text-cyan-400 transition-colors">São José dos Pinhais</a>
               </li>
               <li>
-                <a href="/cidades/pinhais" className="hover:text-cyan-400 transition-colors">Pinhais</a>
+                <a href="/cidade/pinhais" className="hover:text-cyan-400 transition-colors">Pinhais</a>
               </li>
               <li>
-                <a href="/cidades/araucaria" className="hover:text-cyan-400 transition-colors">Araucária</a>
+                <a href="/cidade/araucaria" className="hover:text-cyan-400 transition-colors">Araucária</a>
               </li>
               <li>
-                <a href="/cidades/colombo" className="hover:text-cyan-400 transition-colors">Colombo</a>
+                <a href="/cidade/colombo" className="hover:text-cyan-400 transition-colors">Colombo</a>
               </li>
               <li>
                 <a href="/duvidas" className="hover:text-cyan-400 transition-colors">Dúvidas Frequentes (FAQ)</a>

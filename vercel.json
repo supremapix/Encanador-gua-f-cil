@@ -14,12 +14,12 @@
     },
     {
       "source": "/bairros-antigos/:slug*",
-      "destination": "/bairros/:slug*",
+      "destination": "/bairro/:slug*",
       "permanent": true
     },
     {
-      "source": "/bairro/:slug*",
-      "destination": "/bairros/:slug*",
+      "source": "/bairros/:slug*",
+      "destination": "/bairro/:slug*",
       "permanent": true
     },
     {
@@ -43,18 +43,23 @@
       "permanent": true
     },
     {
-      "source": "/cidade/:slug*",
-      "destination": "/cidades/:slug*",
+      "source": "/cidades/:slug*",
+      "destination": "/cidade/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/municipios/:slug*",
+      "destination": "/cidade/:slug*",
       "permanent": true
     },
     {
       "source": "/municipio/:slug*",
-      "destination": "/cidades/:slug*",
+      "destination": "/cidade/:slug*",
       "permanent": true
     },
     {
       "source": "/local/:slug*",
-      "destination": "/bairros/:slug*",
+      "destination": "/bairro/:slug*",
       "permanent": true
     },
     {

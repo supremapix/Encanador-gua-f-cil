@@ -67,7 +67,7 @@ export const CuritibaPage: React.FC = () => {
               {CURITIBA_NEIGHBORHOODS.map((b) => (
                 <a
                   key={b.slug}
-                  href={`/bairros/${b.slug}`}
+                  href={`/bairro/${b.slug}`}
                   className="p-3 bg-slate-50 dark:bg-slate-800/50 hover:bg-cyan-50 dark:hover:bg-cyan-950/60 rounded-xl border border-slate-200 dark:border-slate-700/80 hover:border-cyan-500 text-xs font-bold text-slate-800 dark:text-slate-200 hover:text-cyan-900 dark:hover:text-cyan-300 transition-colors flex items-center justify-between group truncate"
                 >
                   <span className="truncate">{b.name}</span>

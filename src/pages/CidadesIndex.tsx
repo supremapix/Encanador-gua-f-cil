@@ -45,7 +45,7 @@ export const CidadesIndexPage: React.FC = () => {
               {SERVICE_CITIES.map((c) => (
                 <a
                   key={c.slug}
-                  href={`/cidades/${c.slug}`}
+                  href={`/cidade/${c.slug}`}
                   className="p-4 bg-slate-50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-blue-950/40 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all flex items-center justify-between group"
                 >
                   <div>

@@ -137,11 +137,11 @@ export function getAllIndexableRoutes(): RouteMeta[] {
   // 75 Official Neighborhoods
   CURITIBA_NEIGHBORHOODS.forEach(bairro => {
     routes.push({
-      path: `/bairros/${bairro.slug}`,
+      path: `/bairro/${bairro.slug}`,
       title: bairro.title,
       description: bairro.description,
       h1: `Encanador no Bairro ${bairro.name} em Curitiba`,
-      canonical: `${BASE}/bairros/${bairro.slug}`,
+      canonical: `${BASE}/bairro/${bairro.slug}`,
       type: "neighborhood_detail"
     });
   });
@@ -161,11 +161,11 @@ export function getAllIndexableRoutes(): RouteMeta[] {
   // Cities
   SERVICE_CITIES.forEach(city => {
     routes.push({
-      path: `/cidades/${city.slug}`,
+      path: `/cidade/${city.slug}`,
       title: city.title,
       description: city.description,
       h1: `Encanador em ${city.name}`,
-      canonical: `${BASE}/cidades/${city.slug}`,
+      canonical: `${BASE}/cidade/${city.slug}`,
       type: "city_detail"
     });
   });

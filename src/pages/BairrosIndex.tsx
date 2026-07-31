@@ -49,7 +49,7 @@ export const BairrosIndexPage: React.FC = () => {
               {CURITIBA_NEIGHBORHOODS.map((b) => (
                 <a
                   key={b.slug}
-                  href={`/bairros/${b.slug}`}
+                  href={`/bairro/${b.slug}`}
                   className="p-3.5 bg-slate-50 dark:bg-slate-800/50 hover:bg-cyan-50 dark:hover:bg-cyan-950/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500 transition-all flex items-center justify-between group"
                 >
                   <div>

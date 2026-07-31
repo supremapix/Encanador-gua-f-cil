@@ -15,9 +15,9 @@ export const SitemapHtmlPage: React.FC = () => {
   );
 
   const servicePages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/servicos/'));
-  const bairroPages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/bairros/'));
+  const bairroPages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/bairro/'));
   const regiaoPages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/regioes/'));
-  const cidadePages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/cidades/'));
+  const cidadePages = INDEXABLE_ROUTES.filter(r => r.path.startsWith('/cidade/'));
 
   return (
     <>

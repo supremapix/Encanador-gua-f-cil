@@ -236,7 +236,7 @@ export const App: React.FC = () => {
     );
 
     if (matchedBairro) {
-      const canonicalPath = `/bairros/${matchedBairro.slug}`;
+      const canonicalPath = `/bairro/${matchedBairro.slug}`;
       if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
         window.history.replaceState({}, '', canonicalPath);
       }
@@ -270,7 +270,7 @@ export const App: React.FC = () => {
               answer: `Os profissionais saem da nossa sede na Rua das Águias, 320 – Cidade Industrial de Curitiba (CIC) diretamente para o bairro ${matchedBairro.name}.`
             }
           ]}
-          canonical={`${COMPANY_DATA.baseUrl}/bairros/${matchedBairro.slug}`}
+          canonical={`${COMPANY_DATA.baseUrl}/bairro/${matchedBairro.slug}`}
         />
       );
     }
@@ -320,7 +320,7 @@ export const App: React.FC = () => {
     );
 
     if (matchedCity) {
-      const canonicalPath = `/cidades/${matchedCity.slug}`;
+      const canonicalPath = `/cidade/${matchedCity.slug}`;
       if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
         window.history.replaceState({}, '', canonicalPath);
       }
@@ -348,7 +348,7 @@ export const App: React.FC = () => {
               answer: `Sim, prestamos atendimento em ${matchedCity.name} em um raio de até 100 km a partir da nossa sede em Curitiba.`
             }
           ]}
-          canonical={`${COMPANY_DATA.baseUrl}/cidades/${matchedCity.slug}`}
+          canonical={`${COMPANY_DATA.baseUrl}/cidade/${matchedCity.slug}`}
         />
       );
     }
