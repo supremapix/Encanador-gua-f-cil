@@ -163,14 +163,14 @@ ${PLUMBING_SERVICES.map(
 
 ## Cobertura por Cidades na Região Metropolitana de Curitiba
 ${SERVICE_CITIES.map(
-  (c) => `- **${c.name}:** ${siteUrl}/cidades/${c.slug} – ${c.description}`
+  (c) => `- **${c.name}:** ${siteUrl}/cidade/${c.slug} – ${c.description}`
 ).join('\n')}
 
 ---
 
 ## Cobertura nos 75 Bairros Oficiais de Curitiba
 ${CURITIBA_NEIGHBORHOODS.map(
-  (b) => `- **${b.name} (${b.region}):** ${siteUrl}/bairros/${b.slug}`
+  (b) => `- **${b.name} (${b.region}):** ${siteUrl}/bairro/${b.slug}`
 ).join('\n')}
 
 ---

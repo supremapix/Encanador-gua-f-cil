@@ -105,7 +105,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api|assets|favicon|site\\.webmanifest|robots\\.txt|sitemap\\.xml).*)",
       "destination": "/index.html"
     }
   ]
