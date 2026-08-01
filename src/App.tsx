@@ -120,6 +120,25 @@ export const App: React.FC = () => {
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "");
 
+    // Known Location & Service Aliases for legacy URLs
+    const LOCATION_ALIASES: Record<string, string> = {
+      'batel-soho': 'batel',
+      'batel-curitiba': 'batel',
+      'centro-batel': 'batel',
+      'bairro-batel': 'batel',
+      'agua-verde-curitiba': 'agua-verde',
+      'cidade-industrial': 'cidade-industrial-curitiba',
+      'cic': 'cidade-industrial-curitiba',
+      'ecoville': 'mossungue',
+      'champagnat': 'bigorrilho',
+      'centro-civico': 'centro-civico',
+      'alto-da-xv': 'alto-da-rua-xv',
+      'alto-da-rua-15': 'alto-da-rua-xv',
+      'sjp': 'sao-jose-dos-pinhais',
+      'sao-jose': 'sao-jose-dos-pinhais',
+      'sao-jose-pinhais': 'sao-jose-dos-pinhais'
+    };
+
     // Static Legacy URL Aliases Map
     const LEGACY_STATIC_MAP: Record<string, string> = {
       '/index.php': '/',
@@ -196,7 +215,6 @@ export const App: React.FC = () => {
     if (path === '/sitemap') return <SitemapHtmlPage />;
 
     // Extract potential candidate slug from various legacy URL patterns
-    // e.g. /bairro/caiua, /bairros/caiua, /regiao/caiua, /regioes/caiua, /cidade/caiua, /servico/caiua, /encanador-em-caiua, etc.
     let candidateSlug = path;
     const prefixesToStrip = [
       '/bairro/',
@@ -210,6 +228,8 @@ export const App: React.FC = () => {
       '/servico/',
       '/servicos/',
       '/encanador-em-',
+      '/encanador-no-',
+      '/encanador-na-',
       '/encanador-',
       '/desentupidora-',
       '/caca-vazamento-',
@@ -228,12 +248,31 @@ export const App: React.FC = () => {
       }
     }
 
-    const normCandidate = normalize(candidateSlug);
+    // Clean common location suffixes like -curitiba, -pr, -rmc, -curitiba-pr
+    candidateSlug = candidateSlug
+      .replace(/-(curitiba-pr|curitiba|pr|rmc)$/i, '')
+      .replace(/^bairro-/i, '')
+      .replace(/^cidade-/i, '');
+
+    let normCandidate = normalize(candidateSlug);
+
+    // Apply location alias mapping if available
+    if (LOCATION_ALIASES[normCandidate]) {
+      normCandidate = LOCATION_ALIASES[normCandidate];
+    }
 
     // 1. Try finding matching Bairro in CURITIBA_NEIGHBORHOODS (75 Bairros)
-    const matchedBairro = CURITIBA_NEIGHBORHOODS.find(
-      (b) => normalize(b.slug) === normCandidate || normalize(b.name) === normCandidate
-    );
+    const normNoHyphen = normCandidate.replace(/-/g, '');
+    const matchedBairro = CURITIBA_NEIGHBORHOODS.find((b) => {
+      const bSlug = normalize(b.slug);
+      const bName = normalize(b.name);
+      return (
+        bSlug === normCandidate ||
+        bName === normCandidate ||
+        bSlug.replace(/-/g, '') === normNoHyphen ||
+        bName.replace(/-/g, '') === normNoHyphen
+      );
+    });
 
     if (matchedBairro) {
       const canonicalPath = `/bairro/${matchedBairro.slug}`;
@@ -276,9 +315,16 @@ export const App: React.FC = () => {
     }
 
     // 2. Try finding matching Vila / Popular Area in POPULAR_AREAS (e.g. Caiuá, Vila Sandra)
-    const matchedPopular = POPULAR_AREAS.find(
-      (p) => normalize(p.slug) === normCandidate || normalize(p.name) === normCandidate
-    );
+    const matchedPopular = POPULAR_AREAS.find((p) => {
+      const pSlug = normalize(p.slug);
+      const pName = normalize(p.name);
+      return (
+        pSlug === normCandidate ||
+        pName === normCandidate ||
+        pSlug.replace(/-/g, '') === normNoHyphen ||
+        pName.replace(/-/g, '') === normNoHyphen
+      );
+    });
 
     if (matchedPopular) {
       const canonicalPath = `/regioes/${matchedPopular.slug}`;
@@ -315,9 +361,16 @@ export const App: React.FC = () => {
     }
 
     // 3. Try finding matching City in SERVICE_CITIES (15 RMC Cities)
-    const matchedCity = SERVICE_CITIES.find(
-      (c) => normalize(c.slug) === normCandidate || normalize(c.name) === normCandidate
-    );
+    const matchedCity = SERVICE_CITIES.find((c) => {
+      const cSlug = normalize(c.slug);
+      const cName = normalize(c.name);
+      return (
+        cSlug === normCandidate ||
+        cName === normCandidate ||
+        cSlug.replace(/-/g, '') === normNoHyphen ||
+        cName.replace(/-/g, '') === normNoHyphen
+      );
+    });
 
     if (matchedCity) {
       const canonicalPath = `/cidade/${matchedCity.slug}`;
@@ -354,9 +407,15 @@ export const App: React.FC = () => {
     }
 
     // 4. Try finding matching Service in PLUMBING_SERVICES
-    const matchedService = PLUMBING_SERVICES.find(
-      (s) => normalize(s.slug) === normCandidate || normalize(s.title) === normCandidate
-    );
+    const matchedService = PLUMBING_SERVICES.find((s) => {
+      const sSlug = normalize(s.slug);
+      const sTitle = normalize(s.title);
+      return (
+        sSlug === normCandidate ||
+        sTitle === normCandidate ||
+        sSlug.replace(/-/g, '') === normNoHyphen
+      );
+    });
 
     if (matchedService) {
       const canonicalPath = `/servicos/${matchedService.slug}`;
@@ -366,54 +425,11 @@ export const App: React.FC = () => {
       return <ServiceDetailPage service={matchedService} />;
     }
 
-    // 5. Fallbacks for old/unmatched location or service prefixes
-    if (
-      path.startsWith('/bairro') ||
-      path.startsWith('/bairros') ||
-      path.startsWith('/local') ||
-      path.startsWith('/locais') ||
-      path.startsWith('/atendimento')
-    ) {
-      if (typeof window !== 'undefined' && window.location.pathname !== '/bairros') {
-        window.history.replaceState({}, '', '/bairros');
-      }
-      return <BairrosIndexPage />;
+    // 5. Automatic Fallback: Any unmatched route or non-existent neighborhood/city slug redirects to Home ("/")
+    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+      window.history.replaceState({}, '', '/');
     }
-
-    if (
-      path.startsWith('/cidade') ||
-      path.startsWith('/cidades') ||
-      path.startsWith('/municipio') ||
-      path.startsWith('/municipios')
-    ) {
-      if (typeof window !== 'undefined' && window.location.pathname !== '/cidades') {
-        window.history.replaceState({}, '', '/cidades');
-      }
-      return <CidadesIndexPage />;
-    }
-
-    if (
-      path.startsWith('/regiao') ||
-      path.startsWith('/regioes') ||
-      path.startsWith('/vila') ||
-      path.startsWith('/vilas') ||
-      path.startsWith('/area')
-    ) {
-      if (typeof window !== 'undefined' && window.location.pathname !== '/regioes') {
-        window.history.replaceState({}, '', '/regioes');
-      }
-      return <RegioesIndexPage />;
-    }
-
-    if (path.startsWith('/servico') || path.startsWith('/servicos')) {
-      if (typeof window !== 'undefined' && window.location.pathname !== '/servicos') {
-        window.history.replaceState({}, '', '/servicos');
-      }
-      return <ServicesIndexPage />;
-    }
-
-    // Unmatched routes render NotFoundPage with redirection info
-    return <NotFoundPage />;
+    return <HomePage />;
   };
 
   return (
