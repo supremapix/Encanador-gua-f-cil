@@ -25,12 +25,26 @@ export const Footer: React.FC = () => {
             <div className="space-y-2 text-xs sm:text-sm pt-1">
               <div className="flex items-start gap-2 text-slate-300">
                 <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                <span>{COMPANY_DATA.address.formatted}</span>
+                <span>Base: {COMPANY_DATA.address.formatted}</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Zap: </span>
                 <a href={`tel:${COMPANY_DATA.phoneRaw}`} className="hover:text-emerald-400 transition-colors font-bold">
                   {COMPANY_DATA.phoneDisplay}
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <Phone className="w-4 h-4 text-yellow-400 shrink-0" />
+                <span>Fixo: </span>
+                <a href={`tel:${COMPANY_DATA.landlineRaw}`} className="hover:text-yellow-300 transition-colors font-bold">
+                  {COMPANY_DATA.landlineDisplay}
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <span className="text-cyan-400 font-bold">@</span>
+                <a href={`mailto:${COMPANY_DATA.email}`} className="hover:text-cyan-300 transition-colors truncate">
+                  {COMPANY_DATA.email}
                 </a>
               </div>
             </div>
@@ -153,7 +167,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Encanador Água Fácil 24H. Todos os direitos reservados. URL Oficial e Canônica: <a href={COMPANY_DATA.baseUrl} className="underline hover:text-slate-300">{COMPANY_DATA.baseUrl}</a>
           </p>
           <p>
-            Atendimento residencial e comercial em Curitiba/PR (Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC) e municípios num raio aproximado de até 100 km. Consulte disponibilidade técnica.
+            Atendimento residencial e comercial em Curitiba/PR (Rua Luiz Maltaca, 36 – Cidade Industrial de Curitiba – CIC) e municípios num raio aproximado de até 100 km. Consulte disponibilidade técnica.
           </p>
         </div>
 

@@ -150,7 +150,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     nearbyAreas: ["Cidade Industrial de Curitiba", "Campo Comprido", "Orleans", "Araucária"],
     title: "Encanador no Bairro Augusta em Curitiba | Atendimento Rápido na Região da CIC",
     description: "Encanador profissional no bairro Augusta em Curitiba. Atendimento vizinho à nossa sede na CIC. Reparo de vazamentos e instalações.",
-    intro: "O bairro Augusta situa-se na região da Cidade Industrial de Curitiba, muito próximo à nossa sede na Rua das Águias. Oferecemos agilidade no atendimento para moradias e empresas locais.",
+    intro: "O bairro Augusta situa-se na região da Cidade Industrial de Curitiba, muito próximo à nossa sede na Rua Luiz Maltaca. Oferecemos agilidade no atendimento para moradias e empresas locais.",
     highlights: ["Deslocamento ágil devido à proximidade técnica", "Conserto de vazamentos e canos furados", "Troca de registros e válvulas"],
     faq: [
       {
@@ -275,7 +275,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Qual o telefone do encanador no Boa Vista?",
-        answer: "O telefone e WhatsApp direto para atendimento no Boa Vista é (41) 99569-4912."
+        answer: "O telefone e WhatsApp direto para atendimento no Boa Vista é (41) 98517-1966."
       }
     ],
     geoContext: "Importante polo residencial e comercial na Zona Norte de Curitiba.",
@@ -435,7 +435,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Qual o tempo de chegada ao Campo Comprido?",
-        answer: "Por estarmos sediados na CIC (Rua das Águias), o acesso ao Campo Comprido é rápido. Fale pelo WhatsApp."
+        answer: "Por estarmos sediados na CIC (Rua Luiz Maltaca), o acesso ao Campo Comprido é rápido. Fale pelo WhatsApp."
       }
     ],
     geoContext: "Extenso bairro residencial e universitário na Zona Oeste de Curitiba.",
@@ -515,7 +515,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Como agendar um encanador no Cascatinha?",
-        answer: "Fale diretamente no nosso WhatsApp (41) 99569-4912 para escolher o melhor horário de atendimento."
+        answer: "Fale diretamente no nosso WhatsApp (41) 98517-1966 para escolher o melhor horário de atendimento."
       }
     ],
     geoContext: "Bairro residencial arborizado na Zona Oeste de Curitiba.",
@@ -589,13 +589,13 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     region: "CIC",
     nearbyAreas: ["Augusta", "Fazendinha", "Capão Raso", "Pinheirinho", "Campo Comprido"],
     title: "Encanador na Cidade Industrial de Curitiba – CIC | Atendimento da Nossa Sede",
-    description: "Encanador na CIC – Cidade Industrial de Curitiba. Atendimento direto da nossa sede na Rua das Águias, 320. Reparo de vazamentos e serviços hidráulicos.",
-    intro: "A Cidade Industrial de Curitiba (CIC) é o maior bairro da capital e onde fica localizada a sede da Encanador Água Fácil 24H (Rua das Águias, 320). Oferecemos prioridade e agilidade máxima para moradias, comércios e empresas de toda a CIC.",
-    highlights: ["Localização da nossa sede principal na Rua das Águias, 320 - CIC", "Deslocamento imediato para todas as vilas e conjuntos da CIC", "Soluções completas para vazamentos, registros e tubulações"],
+    description: "Encanador na CIC – Cidade Industrial de Curitiba. Atendimento direto da nossa sede na Rua Luiz Maltaca, 36. Reparo de vazamentos e serviços hidráulicos.",
+    intro: "A Cidade Industrial de Curitiba (CIC) é o maior bairro da capital e onde fica localizada a sede da Encanador Água Fácil 24H (Rua Luiz Maltaca, 36). Oferecemos prioridade e agilidade máxima para moradias, comércios e empresas de toda a CIC.",
+    highlights: ["Localização da nossa sede principal na Rua Luiz Maltaca, 36 - CIC", "Deslocamento imediato para todas as vilas e conjuntos da CIC", "Soluções completas para vazamentos, registros e tubulações"],
     faq: [
       {
         question: "A empresa tem sede física na CIC?",
-        answer: "Sim! Nossa sede está localizada na Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR, CEP 81450-370."
+        answer: "Sim! Nossa sede está localizada na Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060."
       }
     ],
     geoContext: "Maior bairro de Curitiba em extensão e população, polo industrial e habitacional.",
@@ -635,7 +635,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Como solicitar atendimento de encanador no Fanny?",
-        answer: "Chame pelo WhatsApp (41) 99569-4912 e informe seu endereço no bairro Fanny."
+        answer: "Chame pelo WhatsApp (41) 98517-1966 e informe seu endereço no bairro Fanny."
       }
     ],
     geoContext: "Bairro residencial e de serviços na Zona Sul de Curitiba.",
@@ -715,7 +715,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Qual o telefone do encanador no bairro Guaíra?",
-        answer: "Entre em contato diretamente pelo número (41) 99569-4912 via ligação ou WhatsApp."
+        answer: "Entre em contato diretamente pelo número (41) 98517-1966 via ligação ou WhatsApp."
       }
     ],
     geoContext: "Bairro tradicional da Zona Sul de Curitiba.",
@@ -875,7 +875,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Qual o WhatsApp para chamar encanador no Lindóia?",
-        answer: "Envie mensagem para (41) 99569-4912 para falar diretamente com nossa equipe."
+        answer: "Envie mensagem para (41) 98517-1966 para falar diretamente com nossa equipe."
       }
     ],
     geoContext: "Bairro residencial acolhedor na Zona Sul de Curitiba.",
@@ -975,7 +975,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Como chamar encanador no Parolin?",
-        answer: "Chame no WhatsApp (41) 99569-4912 para agendar o atendimento no Parolin."
+        answer: "Chame no WhatsApp (41) 98517-1966 para agendar o atendimento no Parolin."
       }
     ],
     geoContext: "Bairro misto comercial e residencial na Zona Sul de Curitiba.",
@@ -1295,7 +1295,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     faq: [
       {
         question: "Como agendar um encanador no São Lourenço?",
-        answer: "Fale conosco pelo WhatsApp (41) 99569-4912 e informe seu endereço."
+        answer: "Fale conosco pelo WhatsApp (41) 98517-1966 e informe seu endereço."
       }
     ],
     geoContext: "Bairro cultural e residencial na Zona Norte de Curitiba.",
@@ -1310,7 +1310,7 @@ export const CURITIBA_NEIGHBORHOODS: NeighborhoodData[] = [
     nearbyAreas: ["Cidade Industrial de Curitiba", "Augusta", "Araucária"],
     title: "Encanador no Bairro São Miguel em Curitiba | Atendimento Rápido na CIC",
     description: "Encanador no bairro São Miguel em Curitiba. Atendimento próximo à nossa sede na CIC. Reparo de vazamentos e instalações.",
-    intro: "Localizado no setor sul da Cidade Industrial de Curitiba, o bairro São Miguel tem acesso fácil a partir da nossa sede na Rua das Águias.",
+    intro: "Localizado no setor sul da Cidade Industrial de Curitiba, o bairro São Miguel tem acesso fácil a partir da nossa sede na Rua Luiz Maltaca.",
     highlights: ["Atendimento ágil devido à proximidade com nossa sede na CIC", "Conserto de vazamentos em residências e empresas", "Instalação e troca de torneiras e pias"],
     faq: [
       {

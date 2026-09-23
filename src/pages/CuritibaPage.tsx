@@ -35,7 +35,7 @@ export const CuritibaPage: React.FC = () => {
               Encanador em Curitiba PR – Atendimento Especializado
             </h1>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-              Curitiba possui mais de 1,7 milhão de habitantes distribuídos em 75 bairros oficiais. A Encanador Água Fácil 24H possui sede física na Cidade Industrial de Curitiba (CIC) na <strong className="text-slate-900 dark:text-white">Rua das Águias, 320</strong> e presta assistência técnica em encanamento em toda a capital paranaense.
+              Curitiba possui mais de 1,7 milhão de habitantes distribuídos em 75 bairros oficiais. A Encanador Água Fácil 24H possui sede física na Cidade Industrial de Curitiba (CIC) na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36</strong> e presta assistência técnica em encanamento em toda a capital paranaense.
             </p>
 
             <div className="p-4 bg-cyan-50 dark:bg-cyan-950/50 rounded-xl border border-cyan-200 dark:border-cyan-800 text-xs sm:text-sm text-cyan-900 dark:text-cyan-200 space-y-1">

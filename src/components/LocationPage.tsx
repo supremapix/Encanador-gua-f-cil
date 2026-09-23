@@ -88,7 +88,7 @@ export const LocationPage: React.FC<LocationPageProps> = ({
                   <span>Área Atendida com Saída Técnica da CIC Curitiba</span>
                 </p>
                 <p>
-                  Nossa sede técnica principal está localizada na <strong className="text-slate-900 dark:text-white">Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR, CEP 81450-370</strong>. Atendemos a região de <strong className="text-slate-900 dark:text-white">{name}</strong> mediante deslocamento técnico e consulta de disponibilidade imediata.
+                  Nossa sede técnica principal está localizada na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>. Atendemos a região de <strong className="text-slate-900 dark:text-white">{name}</strong> mediante deslocamento técnico e consulta de disponibilidade imediata.
                 </p>
               </div>
 
@@ -255,7 +255,7 @@ export const LocationPage: React.FC<LocationPageProps> = ({
                     className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition-colors border border-slate-700"
                   >
                     <Phone className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Ligar para (41) 99569-4912</span>
+                    <span>Ligar para {COMPANY_DATA.phoneDisplay}</span>
                   </a>
                 </div>
               </div>

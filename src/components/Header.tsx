@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
           <div className="flex items-center gap-2">
             <MapPin className="w-3.5 h-3.5 text-cyan-300 shrink-0" />
-            <span className="truncate">Sede na CIC: Rua das Águias, 320 – Curitiba/PR</span>
+            <span className="truncate">Base: Rua Luiz Maltaca, 36, CIC – Curitiba/PR</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="hidden md:inline text-cyan-200">Atendimento em Curitiba e Região Metropolitana</span>
@@ -83,7 +83,7 @@ export const Header: React.FC = () => {
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2.5 rounded-lg shadow-sm hover:shadow transition-all active:scale-95"
           >
             <Wrench className="w-4 h-4" />
-            <span>WhatsApp (41) 99569-4912</span>
+            <span>WhatsApp {COMPANY_DATA.phoneDisplay}</span>
           </a>
         </div>
 
@@ -143,7 +143,7 @@ export const Header: React.FC = () => {
               className="w-full justify-center inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-3 rounded-lg shadow"
             >
               <Wrench className="w-4 h-4" />
-              <span>WhatsApp: (41) 99569-4912</span>
+              <span>WhatsApp: {COMPANY_DATA.phoneDisplay}</span>
             </a>
           </div>
         </div>

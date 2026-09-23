@@ -12,8 +12,8 @@ export const ContatoPage: React.FC = () => {
   return (
     <>
       <EnhancedSEO
-        title="Contato e Orçamento | Encanador Água Fácil (41) 99569-4912"
-        description="Entre em contato com a Encanador Água Fácil pelo WhatsApp (41) 99569-4912. Solicite atendimento de encanador em Curitiba e região."
+        title={`Contato e Orçamento | Encanador Água Fácil ${COMPANY_DATA.phoneDisplay}`}
+        description={`Entre em contato com a Encanador Água Fácil pelo WhatsApp ${COMPANY_DATA.phoneDisplay}. Solicite atendimento de encanador em Curitiba e região.`}
         canonical={canonical}
         breadcrumbs={breadcrumbs}
       />
@@ -40,7 +40,7 @@ export const ContatoPage: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-cyan-400 shrink-0 mt-1" />
                   <div>
-                    <strong className="block text-white">Sede e Endereço Físico:</strong>
+                    <strong className="block text-white">Base Operacional:</strong>
                     <p className="text-slate-300">{COMPANY_DATA.address.formatted}</p>
                   </div>
                 </div>
@@ -48,9 +48,29 @@ export const ContatoPage: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-emerald-400 shrink-0" />
                   <div>
-                    <strong className="block text-white">Telefone e WhatsApp:</strong>
+                    <strong className="block text-white">WhatsApp Plantão 24h:</strong>
                     <a href={`tel:${COMPANY_DATA.phoneRaw}`} className="text-emerald-400 font-bold hover:underline">
                       {COMPANY_DATA.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-yellow-400 shrink-0" />
+                  <div>
+                    <strong className="block text-white">Telefone Fixo Central:</strong>
+                    <a href={`tel:${COMPANY_DATA.landlineRaw}`} className="text-yellow-300 font-bold hover:underline">
+                      {COMPANY_DATA.landlineDisplay}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 text-cyan-400 shrink-0 font-bold flex items-center justify-center">@</span>
+                  <div>
+                    <strong className="block text-white">E-mail Comercial:</strong>
+                    <a href={`mailto:${COMPANY_DATA.email}`} className="text-cyan-300 hover:underline">
+                      {COMPANY_DATA.email}
                     </a>
                   </div>
                 </div>

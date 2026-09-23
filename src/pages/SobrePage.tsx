@@ -14,7 +14,7 @@ export const SobrePage: React.FC = () => {
     <>
       <EnhancedSEO
         title="Sobre a Empresa | Encanador Água Fácil 24H na CIC Curitiba"
-        description="Conheça a Encanador Água Fácil 24H, localizada na Rua das Águias, 320 – CIC. Especialista em reparos hidráulicos e atendimento ágil em Curitiba e RMC."
+        description="Conheça a Encanador Água Fácil 24H, localizada na Rua Luiz Maltaca, 36 – CIC. Especialista em reparos hidráulicos e atendimento ágil em Curitiba e RMC."
         canonical={canonical}
         breadcrumbs={breadcrumbs}
       />
@@ -32,7 +32,7 @@ export const SobrePage: React.FC = () => {
               Sobre a Encanador Água Fácil 24H
             </h1>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-              Com sede técnica localizada na <strong className="text-slate-900 dark:text-white">Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR, CEP 81450-370</strong>, atuamos no segmento de instalações e reparos hidráulicos para residências, condomínios e estabelecimentos comerciais.
+              Com sede técnica localizada na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>, atuamos no segmento de instalações e reparos hidráulicos para residências, condomínios e estabelecimentos comerciais.
             </p>
           </div>
 

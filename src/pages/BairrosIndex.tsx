@@ -33,7 +33,7 @@ export const BairrosIndexPage: React.FC = () => {
               Atendimento de Encanador nos 75 Bairros Oficiais de Curitiba
             </h1>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-              Confira a lista completa e individual dos 75 bairros oficiais de Curitiba atendidos pela Encanador Água Fácil 24H com saída da nossa sede na CIC (Rua das Águias, 320).
+              Confira a lista completa e individual dos 75 bairros oficiais de Curitiba atendidos pela Encanador Água Fácil 24H com saída da nossa sede na CIC (Rua Luiz Maltaca, 36).
             </p>
           </div>
 

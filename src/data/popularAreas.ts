@@ -75,7 +75,7 @@ export const POPULAR_AREAS: PopularAreaData[] = [
     faq: [
       {
         question: "Como chamar encanador no Vitória Régia?",
-        answer: "Fale diretamente pelo nosso WhatsApp (41) 99569-4912 e agende o atendimento."
+        answer: "Fale diretamente pelo nosso WhatsApp (41) 98517-1966 e agende o atendimento."
       }
     ],
     geoContext: "Loteamento habitacional na área sul da Cidade Industrial de Curitiba.",

@@ -193,12 +193,12 @@ export const HeroSlider: React.FC = () => {
                   rel="noopener noreferrer"
                   className="underline decoration-2 underline-offset-2 text-emerald-100 hover:text-white transition-colors"
                 >
-                  (41) 99569-4912
+                  {COMPANY_DATA.phoneDisplay}
                 </a>
               </span>
               <span className="flex items-center gap-2 text-cyan-100 shrink-0">
                 <MapPin className="w-4 h-4 text-cyan-300" />
-                SEDE NA CIC: RUA DAS ÁGUIAS, 320 - CURITIBA/PR
+                BASE: RUA LUIZ MALTACA, 36 - CIC, CURITIBA/PR
               </span>
               <span className="flex items-center gap-2 text-amber-100 shrink-0">
                 <Sparkles className="w-4 h-4 text-amber-300" />
@@ -230,12 +230,12 @@ export const HeroSlider: React.FC = () => {
                   rel="noopener noreferrer"
                   className="underline decoration-2 underline-offset-2 text-emerald-100 hover:text-white transition-colors"
                 >
-                  (41) 99569-4912
+                  {COMPANY_DATA.phoneDisplay}
                 </a>
               </span>
               <span className="flex items-center gap-2 text-cyan-100 shrink-0">
                 <MapPin className="w-4 h-4 text-cyan-300" />
-                SEDE NA CIC: RUA DAS ÁGUIAS, 320 - CURITIBA/PR
+                BASE: RUA LUIZ MALTACA, 36 - CIC, CURITIBA/PR
               </span>
               <span className="flex items-center gap-2 text-amber-100 shrink-0">
                 <Sparkles className="w-4 h-4 text-amber-300" />

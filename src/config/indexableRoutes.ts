@@ -19,7 +19,7 @@ export function getAllIndexableRoutes(): RouteMeta[] {
     {
       path: "/",
       title: "Encanador em Curitiba e Região | Encanador Água Fácil 24H",
-      description: "Serviços de encanador em Curitiba e Região Metropolitana. Reparo de vazamentos, troca de torneiras, registros e louças. Sede na CIC (Rua das Águias, 320). Solicite orçamento via WhatsApp!",
+      description: "Serviços de encanador em Curitiba e Região Metropolitana. Reparo de vazamentos, troca de torneiras, registros e louças. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento via WhatsApp!",
       h1: "Encanador em Curitiba e Região Metropolitana",
       canonical: `${BASE}/`,
       type: "home"
@@ -42,8 +42,8 @@ export function getAllIndexableRoutes(): RouteMeta[] {
     },
     {
       path: "/encanador-cic",
-      title: "Encanador na CIC – Cidade Industrial de Curitiba | Sede na Rua das Águias",
-      description: "Encanador na Cidade Industrial de Curitiba (CIC). Atendimento direto da nossa sede na Rua das Águias, 320. Rapidez máxima para vazamentos e serviços hidráulicos.",
+      title: "Encanador na CIC – Cidade Industrial de Curitiba | Sede na Rua Luiz Maltaca",
+      description: "Encanador na Cidade Industrial de Curitiba (CIC). Atendimento direto da nossa sede na Rua Luiz Maltaca, 36. Rapidez máxima para vazamentos e serviços hidráulicos.",
       h1: "Encanador na Cidade Industrial de Curitiba – CIC",
       canonical: `${BASE}/encanador-cic`,
       type: "cic"
@@ -83,15 +83,15 @@ export function getAllIndexableRoutes(): RouteMeta[] {
     {
       path: "/sobre",
       title: "Sobre a Empresa | Encanador Água Fácil 24H na CIC Curitiba",
-      description: "Conheça a Encanador Água Fácil 24H, localizada na Rua das Águias, 320 – CIC. Especialista em reparos hidráulicos e atendimento ágil em Curitiba e RMC.",
+      description: "Conheça a Encanador Água Fácil 24H, localizada na Rua Luiz Maltaca, 36 – CIC. Especialista em reparos hidráulicos e atendimento ágil em Curitiba e RMC.",
       h1: "Sobre a Encanador Água Fácil 24H",
       canonical: `${BASE}/sobre`,
       type: "institutional"
     },
     {
       path: "/contato",
-      title: "Contato e Orçamento | Encanador Água Fácil (41) 99569-4912",
-      description: "Entre em contato com a Encanador Água Fácil pelo WhatsApp (41) 99569-4912. Solicite atendimento de encanador em Curitiba e região.",
+      title: "Contato e Orçamento | Encanador Água Fácil (41) 98517-1966",
+      description: "Entre em contato com a Encanador Água Fácil pelo WhatsApp (41) 98517-1966. Solicite atendimento de encanador em Curitiba e região.",
       h1: "Fale Conosco e Solicite Atendimento",
       canonical: `${BASE}/contato`,
       type: "institutional"

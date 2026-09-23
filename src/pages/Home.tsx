@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
     <>
       <EnhancedSEO
         title="Encanador em Curitiba e Região | Encanador Água Fácil 24H"
-        description="Serviços de encanador em Curitiba e Região Metropolitana. Reparo de vazamentos, troca de torneiras, registros e louças. Sede na CIC (Rua das Águias, 320). Solicite orçamento via WhatsApp!"
+        description="Serviços de encanador em Curitiba e Região Metropolitana. Reparo de vazamentos, troca de torneiras, registros e louças. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento via WhatsApp!"
         canonical={`${COMPANY_DATA.baseUrl}/`}
         faqItems={GLOBAL_FAQS}
       />
@@ -36,7 +36,7 @@ export const HomePage: React.FC = () => {
                   Encanador Água Fácil 24H em Curitiba e Região
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-                  Com sede técnica estabelecida na <strong className="text-slate-900 dark:text-white">Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR (CEP 81450-370)</strong>, prestamos serviços de manutenção hidráulica, conserto de vazamentos, troca de registros, torneiras e louças sanitárias em todos os 75 bairros de Curitiba e 15 municípios da Região Metropolitana.
+                  Com base operacional estabelecida na <strong className="text-slate-900 dark:text-white">{COMPANY_DATA.address.formatted}</strong>, prestamos serviços de manutenção hidráulica, conserto de vazamentos, troca de registros, torneiras e louças sanitárias em todos os 75 bairros de Curitiba e 15 municípios da Região Metropolitana.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <div className="flex items-center gap-2 text-sm font-semibold text-slate-800 dark:text-slate-200">
@@ -76,7 +76,7 @@ export const HomePage: React.FC = () => {
                   </p>
                   <p className="flex items-center gap-2">
                     <PhoneCall className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>(41) 99569-4912</span>
+                    <span>{COMPANY_DATA.phoneDisplay}</span>
                   </p>
                 </div>
                 <a

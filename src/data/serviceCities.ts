@@ -75,7 +75,7 @@ export const SERVICE_CITIES: ServiceCityData[] = [
     faq: [
       {
         question: "Araucária fica perto da sede de vocês?",
-        answer: "Sim! Nossa empresa fica na CIC (Rua das Águias), muito próxima da divisa com Araucária, facilitando o acesso."
+        answer: "Sim! Nossa empresa fica na CIC (Rua Luiz Maltaca), muito próxima da divisa com Araucária, facilitando o acesso."
       }
     ],
     geoContext: "Polo industrial de grande porte vizinho à Zona Sul e Oeste de Curitiba.",
@@ -113,7 +113,7 @@ export const SERVICE_CITIES: ServiceCityData[] = [
     faq: [
       {
         question: "Como agendar encanador para Campo Largo?",
-        answer: "Envie sua mensagem no WhatsApp (41) 99569-4912 e informe seu endereço em Campo Largo."
+        answer: "Envie sua mensagem no WhatsApp (41) 98517-1966 e informe seu endereço em Campo Largo."
       }
     ],
     geoContext: "Importante município no eixo oeste da Região Metropolitana.",
@@ -208,7 +208,7 @@ export const SERVICE_CITIES: ServiceCityData[] = [
     faq: [
       {
         question: "Como agendar atendimento em Mandirituba?",
-        answer: "Fale conosco pelo WhatsApp (41) 99569-4912 para consultar datas disponíveis."
+        answer: "Fale conosco pelo WhatsApp (41) 98517-1966 para consultar datas disponíveis."
       }
     ],
     geoContext: "Município ao sul da Região Metropolitana de Curitiba.",
@@ -284,7 +284,7 @@ export const SERVICE_CITIES: ServiceCityData[] = [
     faq: [
       {
         question: "Como solicitar encanador em Tijucas do Sul?",
-        answer: "Entre em contato pelo WhatsApp (41) 99569-4912 para verificar as datas de rota."
+        answer: "Entre em contato pelo WhatsApp (41) 98517-1966 para verificar as datas de rota."
       }
     ],
     geoContext: "Município do setor sudeste da RMC na serra do mar.",

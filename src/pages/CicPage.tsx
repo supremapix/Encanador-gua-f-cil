@@ -17,8 +17,8 @@ export const CicPage: React.FC = () => {
   return (
     <>
       <EnhancedSEO
-        title="Encanador na CIC – Cidade Industrial de Curitiba | Sede na Rua das Águias"
-        description="Encanador na Cidade Industrial de Curitiba (CIC). Atendimento direto da nossa sede na Rua das Águias, 320. Rapidez máxima para vazamentos e serviços hidráulicos."
+        title="Encanador na CIC – Cidade Industrial de Curitiba | Sede na Rua Luiz Maltaca"
+        description="Encanador na Cidade Industrial de Curitiba (CIC). Atendimento direto da nossa sede na Rua Luiz Maltaca, 36. Rapidez máxima para vazamentos e serviços hidráulicos."
         canonical={canonical}
         breadcrumbs={breadcrumbs}
       />
@@ -48,7 +48,7 @@ export const CicPage: React.FC = () => {
                 <span>Endereço Oficial da Sede:</span>
               </div>
               <p className="text-base sm:text-lg font-extrabold text-white">
-                Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR, CEP 81450-370
+                Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060
               </p>
               <p className="text-xs text-cyan-200">
                 A proximidade física com todas as vilas e conjuntos da CIC garante atendimento ágil para vazamentos e manutenções hidráulicas.
@@ -81,7 +81,7 @@ export const CicPage: React.FC = () => {
               Vilas e Conjuntos Habitacionais Atendidos na CIC
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Devido à vasta extensão territorial da Cidade Industrial de Curitiba, atendemos todas as subdivisões habitacionais e loteamentos locais com saída direta da Rua das Águias, 320:
+              Devido à vasta extensão territorial da Cidade Industrial de Curitiba, atendemos todas as subdivisões habitacionais e loteamentos locais com saída direta da Rua Luiz Maltaca, 36:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {cicVilas.map((v) => (
@@ -107,7 +107,7 @@ export const CicPage: React.FC = () => {
           {/* Contextual Video */}
           <LiteYouTube
             contextTitle="Atendimento de Encanador na CIC Curitiba"
-            contextText="Conheça a atuação da Encanador Água Fácil a partir da nossa sede na Rua das Águias, 320 – CIC."
+            contextText="Conheça a atuação da Encanador Água Fácil a partir da nossa sede na Rua Luiz Maltaca, 36 – CIC."
           />
 
           {/* Contact Form */}

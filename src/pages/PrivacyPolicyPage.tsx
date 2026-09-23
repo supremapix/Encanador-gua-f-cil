@@ -26,7 +26,7 @@ export const PrivacyPolicyPage: React.FC = () => {
             </h1>
             <div className="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               <p>
-                A <strong>Encanador Água Fácil 24H</strong>, com sede na Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba/PR, preza pelo respeito à privacidade e pela segurança dos dados pessoais de nossos clientes e visitantes.
+                A <strong>Encanador Água Fácil 24H</strong>, com sede na Rua Luiz Maltaca, 36 – Cidade Industrial de Curitiba – CIC, Curitiba/PR, preza pelo respeito à privacidade e pela segurança dos dados pessoais de nossos clientes e visitantes.
               </p>
               <h2 className="text-lg font-bold text-slate-900 dark:text-white pt-2">
                 Coleta de Dados
@@ -44,7 +44,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                 Lei Geral de Proteção de Dados (LGPD)
               </h2>
               <p>
-                Em conformidade com a LGPD (Lei nº 13.709/2018), o usuário pode solicitar a confirmação, acesso, correção ou exclusão de seus dados pessoais entrando em contato através do WhatsApp (41) 99569-4912.
+                Em conformidade com a LGPD (Lei nº 13.709/2018), o usuário pode solicitar a confirmação, acesso, correção ou exclusão de seus dados pessoais entrando em contato através do WhatsApp (41) 98517-1966.
               </p>
             </div>
           </div>

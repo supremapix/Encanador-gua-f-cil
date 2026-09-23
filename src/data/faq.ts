@@ -4,12 +4,12 @@ export const GLOBAL_FAQS: FAQItem[] = [
   {
     category: "Atendimento",
     question: "Como funciona a solicitação de atendimento?",
-    answer: "Você entra em contato via WhatsApp (41) 99569-4912 ou formulário no site, informa o seu nome, bairro ou cidade e descreve o problema hidráulico. Confirmamos a disponibilidade técnica de horário e enviamos a equipe até seu endereço."
+    answer: "Você entra em contato via WhatsApp (41) 98517-1966 ou formulário no site, informa o seu nome, bairro ou cidade e descreve o problema hidráulico. Confirmamos a disponibilidade técnica de horário e enviamos a equipe até seu endereço."
   },
   {
     category: "Atendimento",
     question: "Onde fica a sede da Encanador Água Fácil 24H?",
-    answer: "Nossa sede principal está localizada na Rua das Águias, 320 – Cidade Industrial de Curitiba – CIC, Curitiba – PR, CEP 81450-370."
+    answer: "Nossa sede principal está localizada na Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060."
   },
   {
     category: "Serviços",
