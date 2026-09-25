@@ -2,223 +2,227 @@ import { PlumbingService } from '../types';
 
 export const PLUMBING_SERVICES: PlumbingService[] = [
   {
-    title: "Conserto e Reparo de Vazamentos",
-    slug: "reparo-vazamentos",
-    shortDesc: "Localização visual e reparo ágil de vazamentos em tubulações, torneiras, caixas d'água e registros.",
-    fullDesc: "Os vazamentos invisíveis ou visíveis podem causar grande desperdício de água e danos à estrutura do seu imóvel. Nossa equipe realiza o diagnóstico preciso e o reparo eficiente de tubulações de PVC, PPR, cobre e ferro em residências, condomínios e estabelecimentos comerciais.",
-    iconName: "Droplet",
+    title: "Desentupimento de Pia",
+    slug: "desentupimento-de-pia",
+    shortDesc: "Desobstrução rápida de pias de cozinha e lavatórios com remoção completa de gordura e restos alimentares.",
+    fullDesc: "O entupimento de pias de cozinha e banheiros é causado principalmente pelo acúmulo gradual de gordura, óleos, restos de comida e borra de café nos sifões e tubulações de esgoto. A Água Fácil realiza o desentupimento de pia com raspagem interna mecânica e limpeza de sifão, restaurando o fluxo total de água sem utilizar produtos químicos corrosivos que danificam canos de PVC.",
+    iconName: "Pipette",
     features: [
-      "Diagnóstico preciso de ponto de vazamento",
-      "Substituição de conexões e tubos danificados",
-      "Reparo em canos de água quente e fria",
-      "Verificação de pressão da rede hidráulica"
+      "Raspagem técnica mecânica da tubulação de esgoto da pia",
+      "Limpeza e higienização completa do sifão e conexões",
+      "Remoção de placas de gordura e sedimentos impregnados",
+      "Testes de vazão e estanqueidade no local com garantia de serviço"
     ],
     commonProblems: [
-      "Manchas de umidade nas paredes ou teto",
-      "Aumento repentino no valor da conta de água",
-      "Barulho de água correndo mesmo com torneiras fechadas",
-      "Pisos fofos ou estufados por infiltração"
+      "Água acumulando no bowl da pia e demorando para escoar",
+      "Retorno de água suja ou espumosa pela cuba ao usar a torneira",
+      "Mau cheiro forte de gordura estagnada subindo pelo ralo da pia",
+      "Barulhos de borbulhar nos canos após fechar a torneira"
     ],
     solutions: [
-      "Substituição do trecho avariado da tubulação",
-      "Vedação adequada com conexões certificadas",
-      "Ajuste da pressão de entrada para evitar novas quebras",
-      "Orientação preventiva ao cliente"
+      "Passagem de mola desentupidora rotativa flexível apropriada para diâmetros residenciais",
+      "Desmontagem e desinfecção do sifão hidráulico",
+      "Aplicação de jato de água para limpeza dos resíduos soltos",
+      "Orientação preventiva sobre uso de ralinhos e descarte correto de óleo"
     ],
     faq: [
       {
-        question: "Como sei se há um vazamento na minha casa?",
-        answer: "Fique atento ao aumento injustificado na conta de água, manchas de bolor em paredes, estufamento de pinturas e torneiras pingando. Um teste simples é fechar todas as torneiras e verificar se o relógio de água continua rodando."
+        question: "Por que não devo usar soda cáustica ou produtos diabo verde?",
+        answer: "A soda cáustica reage com a gordura acumulada e forma uma massa petrificada (sabão duro) dentro do cano, além de deformar tubos de PVC devido ao calor gerado pela reação química, agravando o entupimento."
       },
       {
-        question: "Vocês atendem emergências hidráulicas?",
-        answer: "Sim, atendemos chamados urgentes para conter vazamentos ativos. Entre em contato via WhatsApp para verificar o tempo de deslocamento para seu bairro."
+        question: "Quanto tempo demora o atendimento para desentupimento de pia?",
+        answer: "O procedimento técnico de desobstrução de pia costuma levar entre 30 e 60 minutos após o início dos trabalhos pela equipe técnica."
       }
     ]
   },
   {
-    title: "Troca e Conserto de Torneiras, Registros e Válvulas",
-    slug: "troca-torneiras-registros",
-    shortDesc: "Instalação, reparo e vedação de torneiras, registros gaveta/pressão, válvulas Hydra e reparos.",
-    fullDesc: "Torneiras pingando e registros emperrados geram desperdício contínuo de água e desconforto no dia a dia. Realizamos a troca de reparos internos, vedações, substituição de reparos de válvulas de descarga Hydra e instalação de novos metais hidráulicos.",
-    iconName: "Wrench",
+    title: "Desentupimento de Vaso Sanitário",
+    slug: "desentupimento-de-vaso-sanitario",
+    shortDesc: "Remoção de obstruções em vasos sanitários sem quebrar a louça nem danificar o anel de vedação.",
+    fullDesc: "Vasos sanitários entupidos exigem atendimento ágil e higiênico. A Água Fácil utiliza desentupidoras rotativas com ponteiras especiais desenvolvidas para navegar curvas de vasos e ramais de esgoto sanitário sem arranhar a porcelana ou danificar vedações. Resolvemos bloqueios provocados por acúmulo de papel higiênico, sabonete, objetos caindo na bacia e obstruções no ramal principal.",
+    iconName: "ShowerHead",
     features: [
-      "Instalação de torneiras monocomando e misturadores",
-      "Substituição de reparos de registro gaveta e pressão",
-      "Manutenção em válvulas de descarga Hydra e Docol",
-      "Troca de reparos e gaxetas ressecadas"
+      "Desobstrução limpa e higiênica sem sujeira no banheiro",
+      "Equipamentos roto-rooter com proteção para não danificar a porcelana",
+      "Verificação da vedação inferior e alinhamento do anel de cera",
+      "Diagnóstico do ramal de descarga e da caixa de inspeção"
     ],
     commonProblems: [
-      "Torneira pingando sem parar no gotejamento",
-      "Registro que gira em falso ou não fecha a água",
-      "Válvula do vaso sanitário disparada vazando na bacia",
-      "Vazamento na junta da torneira com a bancada ou parede"
+      "Nível de água do vaso subindo quase até a borda ao dar descarga",
+      "Água do vaso descendo muito devagar e sem força de sucção",
+      "Retorno de resíduos ou bolhas de ar pela bacia sanitária",
+      "Obstrução por objetos caídos acidentalmente (blocos odorizadores, brinquedos, panos)"
     ],
     solutions: [
-      "Troca do reparo cerâmico ou vedante de borracha",
-      "Substituição completa do corpo do registro quando espanado",
-      "Aplicação de fita veda-rosca de alta densidade",
+      "Desobstrução com mola espiral helicoidal e ponteira recuperadora",
+      "Caso necessário, remoção técnica e reinstalação da bacia com novo anel de vedação",
+      "Verificação de fluxo no ramal que conecta o vaso à caixa de inspeção",
+      "Higienização da área ao final do atendimento"
+    ],
+    faq: [
+      {
+        question: "Precisa quebrar o vaso sanitário para desentupir?",
+        answer: "Na grande maioria dos casos não! Utilizamos máquinas desentupidoras com cabos flexíveis que entram diretamente pela bacia. A remoção do vaso só ocorre em casos raros onde há objetos rígidos presos no cano submerso."
+      },
+      {
+        question: "Como evitar entupimentos no vaso sanitário?",
+        answer: "Evite descartar lenços umedecidos, papel em excesso, fraldas, absorventes, preservativos ou pedaços de sabonete na bacia sanitária."
+      }
+    ]
+  },
+  {
+    title: "Desentupimento de Ralo",
+    slug: "desentupimento-de-ralo",
+    shortDesc: "Desobstrução de ralos de banheiro, box, sacadas, quintais e áreas de serviço.",
+    fullDesc: "Ralos travados no box do banheiro ou na lavanderia causam alagamentos incômodos e riscos de infiltração nos pisos e apartamentos vizinhos. Nosso serviço de desentupimento de ralo remove bolos de fios de cabelo, restos de sabão mineralizado, areia, folhas e sujeira acumulada nas caixas sifonadas e tubulações de escoamento.",
+    iconName: "Droplet",
+    features: [
+      "Limpeza e desobstrução de caixas sifonadas e grelhas",
+      "Remoção de cabelos, pelos de pets e acúmulos de sabão",
+      "Desentupimento de ralos externos de sacadas, terraços e quintais",
+      "Eliminação de focos de mau cheiro e proliferação de insetos"
+    ],
+    commonProblems: [
+      "Água do banho acumulando no box e cobrindo os pés",
+      "Transbordamento no ralo do banheiro quando a máquina de lavar descarte água",
+      "Ralo da sacada ou quintal empossando água durante chuvas",
+      "Odor desagradável persistente vindo da grelha do ralo"
+    ],
+    solutions: [
+      "Abertura e higienização mecânica do sifão do ralo",
+      "Passagem de cabo desentupidor espiral pelo ramal de descarte",
+      "Remoção dos resíduos sólidos e lavagem com fluxo pressurizado",
+      "Ajuste da tampa sifonada para vedar e evitar entrada de baratas"
+    ],
+    faq: [
+      {
+        question: "Por que o ralo do banheiro exala mau cheiro?",
+        answer: "O mau cheiro ocorre quando a caixa sifonada seca ou quando há acúmulo de cabelos e matéria orgânica em decomposição no interior do cano. A limpeza e desobstrução eliminam a fonte do odor."
+      }
+    ]
+  },
+  {
+    title: "Desentupimento de Esgoto",
+    slug: "desentupimento-de-esgoto",
+    shortDesc: "Desobstrução da rede principal de esgoto, caixas de inspeção, prumadas e ramais externos.",
+    fullDesc: "Entupimentos na tubulação principal de esgoto provocam transbordamento simultâneo em vasos, ralos e pias do imóvel. A Água Fácil conta com máquinas elétricas desentupidoras de alta potência (K-50 e K-500) equipadas com cabos industriais de longa extensão para desentupir redes de esgoto residenciais, prediais e comerciais com total eficiência.",
+    iconName: "ShieldAlert",
+    features: [
+      "Desobstrução de redes de esgoto prediais, comerciais e residenciais",
+      "Limpeza e desobstrução de caixas de inspeção e gordura",
+      "Remoção de raízes de árvores invadindo tubulações enterradas",
+      "Desentupimento de prumadas verticais de condomínios"
+    ],
+    commonProblems: [
+      "Caixa de inspeção no quintal transbordando esgoto bruto",
+      "Todos os ralos e vasos do imóvel entupidos simultaneamente",
+      "Retorno de efluentes em ralos do pavimento térreo",
+      "Interrupção total da vazão da rede para a fossa ou rede pública"
+    ],
+    solutions: [
+      "Utilização de máquina desentupidora mecânica de grande porte",
+      "Ponteiras cortadoras para triturar raízes e crostas rígidas",
+      "Abertura e desobstrução de caixas de passagem e inspeção",
+      "Inspeção técnica do fluxo de esgotamento para prevenir novos bloqueios"
+    ],
+    faq: [
+      {
+        question: "O que causa entupimento na rede principal de esgoto?",
+        answer: "Geralmente é acúmulo prolongado de gordura, descartes inadequados no sanitário, quebra de canos enterrados por peso de veículos ou infiltração de raízes de árvores nas juntas dos tubos."
+      }
+    ]
+  },
+  {
+    title: "Desentupimento e Limpeza de Caixa de Gordura",
+    slug: "desentupimento-caixa-de-gordura",
+    shortDesc: "Raspagem, remoção de placas de gordura e desobstrução dos ramais de entrada e saída da caixa de gordura.",
+    fullDesc: "A caixa de gordura retém os resíduos gordurosos vindos das pias para proteger a rede pública de esgoto. Quando satura, a gordura se solidifica em grandes blocos, travando a passagem de água da cozinha. A Água Fácil realiza a limpeza, raspagem manual e mecânica e desobstrução dos tubos da caixa de gordura em residências, restaurantes e condomínios.",
+    iconName: "Settings",
+    features: [
+      "Remoção e raspagem de blocos de gordura solidificada",
+      "Desentupimento do tubo defletor e dos ramais de entrada/saída",
+      "Limpeza higiênica e descarte correto dos resíduos coletados",
+      "Manutenção preventiva para evitar transbordamento no quintal"
+    ],
+    commonProblems: [
+      "Tampa da caixa de gordura estufando ou vazando sujeira na superfície",
+      "Pia da cozinha totalmente travada mesmo com o sifão limpo",
+      "Mau cheiro insuportável no quintal ou na lavanderia perto da caixa",
+      "Presença frequente de moscas e baratas perto da tampa da caixa"
+    ],
+    solutions: [
+      "Retirada mecânica do excesso de crosta gordurosa",
+      "Desobstrução do tubo de saída até a caixa de inspeção geral",
+      "Lavagem e raspagem das paredes internas do reservatório",
+      "Fechamento adequado para conter emanação de odores"
+    ],
+    faq: [
+      {
+        question: "De quanto em quanto tempo devo limpar a caixa de gordura?",
+        answer: "Em residências, recomendamos a limpeza preventiva a cada 6 meses. Em restaurantes, lanchonetes e condomínios, a limpeza deve ser realizada mensalmente ou trimestralmente dependendo do volume."
+      }
+    ]
+  },
+  {
+    title: "Caça Vazamentos e Reparos Hidráulicos",
+    slug: "reparo-vazamentos",
+    shortDesc: "Diagnóstico e conserto de vazamentos em tubulações, torneiras e registros com teste de estanqueidade.",
+    fullDesc: "Infiltrações e vazamentos invisíveis causam desperdício de água e danos estruturais nas paredes e pisos. Nossa equipe realiza a detecção do ponto de vazamento e o conserto rápido de tubulações de PVC, PPR e cobre em residências e comércios.",
+    iconName: "Wrench",
+    features: [
+      "Identificação visual e testes de vazamento em paredes e pisos",
+      "Substituição de conexões, joelhos e trechos de tubos danificados",
+      "Conserto de vazamentos em tubulações de água fria e quente",
+      "Ajuste e teste de pressão da rede hidráulica"
+    ],
+    commonProblems: [
+      "Manchas de umidade, bolor ou pintura descascando",
+      "Conta de água subindo sem aumento no consumo da família",
+      "Pisos fofos ou estufados em banheiros e cozinhas",
+      "Relógio de água rodando mesmo com torneiras fechadas"
+    ],
+    solutions: [
+      "Substituição do trecho avariado da tubulação com luvas de correr",
+      "Vedação técnica de juntas com cola e rosca apropriadas",
+      "Instalação de redutores ou reguladores de pressão se necessário",
       "Teste de estanqueidade no local"
     ],
     faq: [
       {
-        question: "Vale a pena trocar só o reparo do registro ou o registro todo?",
-        answer: "Na grande maioria dos casos, a substituição do reparo interno resolve o problema sem necessidade de quebrar azulejos. Avaliamos no local a melhor relação custo-benefício."
+        question: "Como identificar se há vazamento no meu imóvel?",
+        answer: "Feche todas as torneiras e saídas de água e verifique se o ponteiro do hidrômetro (relógio) continua girando. Se girar, há passagem indesejada de água na tubulação."
       }
     ]
   },
   {
-    title: "Manutenção Hidráulica Residencial e Comercial",
-    slug: "manutencao-hidraulica",
-    shortDesc: "Revisão geral, adequação de pressão e manutenção preventiva e corretiva para imóveis.",
-    fullDesc: "Manter a rede hidráulica em dia evita surpresas agradáveis com alagamentos ou falhas de abastecimento. Atendemos casas, apartamentos, lojas, escritórios e galpões comerciais com manutenção especializada.",
-    iconName: "Settings",
-    features: [
-      "Revisão de tubulações de alimentação e esgotamento",
-      "Verificação e regulagem de boias de caixa d'água",
-      "Limpeza e verificação de sifões e ralos",
-      "Manutenção em sistemas hidráulicos prediais"
-    ],
-    commonProblems: [
-      "Pressão fraca nos chuveiros e torneiras",
-      "Barulhos de golpes na tubulação (golpe de aríete)",
-      "Retorno de mau cheiro nos ralos e pias",
-      "Transbordamento em caixas de passagem e reservatórios"
-    ],
-    solutions: [
-      "Limpeza e regulagem de válvulas e redutores de pressão",
-      "Troca de boia mecânica por modelos reforçados",
-      "Instalação de vedações anti-odor em ralos e sifões",
-      "Plano de manutenção periódica para estabelecimentos"
-    ],
-    faq: [
-      {
-        question: "Com que frequência devo fazer manutenção hidráulica?",
-        answer: "Recomendamos uma inspeção geral a cada 12 meses em residências e a cada 6 meses em estabelecimentos comerciais e condomínios."
-      }
-    ]
-  },
-  {
-    title: "Instalação de Louças Sanitaristas, Pias e Metais",
-    slug: "instalacao-loucas-metais",
-    shortDesc: "Montagem e instalação de vasos sanitários, pias, tanques, cubas e acessórios hidráulicos.",
-    fullDesc: "Instalação correta de vasos sanitários com anel de vedação, cubas de embutir e sobrepor, pias de cozinha, tanques de lavar roupa e acessórios para banheiros e cozinhas com acabamento limpo e seguro.",
-    iconName: "ShowerHead",
-    features: [
-      "Instalação de vasos sanitários com caixa acoplada ou suspensos",
-      "Colocação de anel de vedação com guia para evitar vazamentos e odores",
-      "Fixação e conexão hidráulica de pias de cozinha e banheiros",
-      "Instalação de duchas higiênicas e chuveiros elétricos/a gás"
-    ],
-    commonProblems: [
-      "Vaso sanitário balançando ou vazando água na base",
-      "Mau cheiro subindo da conexão do vaso com o esgoto",
-      "Infiltração abaixo da pia do banheiro ou cozinha",
-      "Vazamento no engate flexível"
-    ],
-    solutions: [
-      "Instalação de novo anel de vedação de cera/borracha",
-      "Regulagem do nível e fixação com parafusos em inox",
-      "Substituição de engates flexíveis velhos por modelo trançado de inox",
-      "Vedações periféricas com silicone acético neutro"
-    ],
-    faq: [
-      {
-        question: "Vocês fornecem o vaso e as peças ou apenas fazem a instalação?",
-        answer: "Fazemos a mão de obra especializada de instalação. Podemos orientar o cliente sobre os melhores modelos e materiais necessários."
-      }
-    ]
-  },
-  {
-    title: "Desentupimento Emergencial de Pias e Ralos",
-    slug: "desentupimento-emergencial",
-    shortDesc: "Remoção de obstruções em pias de cozinha, lavatórios, ralos de banheiro e sifões.",
-    fullDesc: "Remoção técnica de entupimentos em ramais internos de pias, ralos box, tanques e lavatórios. Atendimento com ferramentas manuais e mola rotativa sem danificar os encanamentos de PVC.",
-    iconName: "Pipette",
-    features: [
-      "Desobstrução de sifões e conexões de pias de cozinha",
-      "Desentupimento de ralos de banheiros acumulados com cabelos e sabão",
-      "Limpeza e remoção de gordura em ramais de pia",
-      "Atendimento ágil para liberar o uso dos equipamentos hidráulicos"
-    ],
-    commonProblems: [
-      "Água da pia demorando para descer ou voltando",
-      "Ralo do banheiro borbulhando ou transbordando no banho",
-      "Acúmulo de gordura e restos alimentares nos canos de esgoto doméstico",
-      "Mau cheiro forte subindo pelas tubulações"
-    ],
-    solutions: [
-      "Raspagem interna com mola desentupidora",
-      "Limpeza completa do sifão e conexões de descarte",
-      "Desobstrução mecânica limpa e sem uso de químicos agressivos",
-      "Orientação de uso correto dos descartes"
-    ],
-    faq: [
-      {
-        question: "Usar diabo verde ou soda cáustica resolve entupimento?",
-        answer: "Não recomendamos o uso de produtos químicos agressivos como soda cáustica, pois podem derreter canos de PVC flexíveis e petrificar a gordura, piorando a obstrução. A remoção mecânica é a solução mais segura."
-      }
-    ]
-  },
-  {
-    title: "Substituição e Reparo de Tubulações e Conexões",
-    slug: "troca-tubulacoes",
-    shortDesc: "Troca de trechos de canos antigos, reparos em conexões quebradas e adequação de redes.",
-    fullDesc: "Seja por desgaste do tempo, impacto mecânico ou erro de instalação antiga, substituímos tubulações rachadas, furadas ou obstruídas por novos tubos e conexões norma ABNT.",
-    iconName: "ShieldAlert",
-    features: [
-      "Troca de tubos de ferro velhos por PVC rígido ou PPR termofusão",
-      "Reparo em canos furados por furadeiras acidentalmente",
-      "Adequação de prumadas e ramais de distribuição",
-      "Soldagem e fusão de conexões hidráulicas de alta resistência"
-    ],
-    commonProblems: [
-      "Cano furado acidentalmente ao instalar armários",
-      "Tubulações antigas de ferro enferrujadas soltando água amarelada",
-      "Rachaduras em conexões devido a alta pressão de água",
-      "Juntas vazando por cola mal aplicada no passado"
-    ],
-    solutions: [
-      "Instalação de luva de correr para reparos rápidos em PVC",
-      "Substituição de trechos velhos com adaptações seguras",
-      "Soldagem e colagem técnica garantindo estanqueidade",
-      "Testes de pressão hidráulica antes de fechar a alvenaria"
-    ],
-    faq: [
-      {
-        question: "Furei um cano com a furadeira ao pendurar um quadro, o que fazer?",
-        answer: "Feche imediatamente o registro geral de água do imóvel para estancar o fluxo e entre em contato conosco. Fazemos o reparo localizado com luva de correr de forma rápida."
-      }
-    ]
-  },
-  {
-    title: "Inspeção e Diagnóstico Hidráulico Preventivo",
-    slug: "inspecao-diagnostico",
-    shortDesc: "Avaliação completa de instalações antes de reformas, compra de imóveis ou identificação de falhas.",
-    fullDesc: "Serviço de vistoria técnica do sistema de água fria, água quente e esgoto para identificar potenciais riscos de vazamento, falta de pressão ou desgaste antes que causem prejuízos maiores.",
+    title: "Troca de Torneiras e Registros",
+    slug: "troca-torneiras-registros",
+    shortDesc: "Instalação e conserto de torneiras, registros de gaveta/pressão e reparos de descarga.",
+    fullDesc: "Torneiras pingando e registros com vazamento no miolo causam desperdício contínuo. Realizamos a troca de reparos internos, vedações, substituição de reparos de válvulas de descarga Hydra e Docol e instalação de novos metais hidráulicos.",
     iconName: "CheckCircle",
     features: [
-      "Verificação de todas as torneiras, caixas e registros do imóvel",
-      "Medição da pressão manométrica da rede de água",
-      "Inspeção de caixas d'água, boias e extravasores (ladrão)",
-      "Emissão de relatório técnico explicativo para o cliente"
+      "Instalação de torneiras monocomando, misturadores e filtros",
+      "Substituição de reparos de registro gaveta e pressão",
+      "Manutenção e troca de reparos em válvulas Hydra e Docol",
+      "Troca de gaxetas e vedações de borracha e cerâmica"
     ],
     commonProblems: [
-      "Imóvel recém-comprado com problemas hidráulicos desconhecidos",
-      "Suspeita de desperdício sem ponto de vazamento visível",
-      "Reformas planejadas sem saber o estado das tubulações existentes",
-      "Presença de barulhos e vibrações ao abrir torneiras"
+      "Torneira pingando continuamente mesmo bem fechada",
+      "Registro que gira em falso ou emperrou e não fecha a água",
+      "Válvula de descarga vazando direto na bacia sanitária",
+      "Vazamento na base da torneira com a bancada"
     ],
     solutions: [
-      "Análise minuciosa de todo o fluxo hídrico",
-      "Recomendações técnicas de adequação",
-      "Prevenção contra sinistros hidráulicos graves",
-      "Economia no consumo mensal de água"
+      "Troca do reparo interno sem necessidade de quebrar a parede",
+      "Substituição do corpo do registro quando espanado",
+      "Aplicação de vedações de alta densidade e testes de estanqueidade",
+      "Ajuste da pressão de fechamento"
     ],
     faq: [
       {
-        question: "Qual a vantagem de fazer uma inspeção antes de reformar?",
-        answer: "Evita que você invista em novos revestimentos e louças caras sem saber se os canos antigos por trás da parede estão prestes a vazar, prevenindo ter que quebrar azulejos novos depois."
+        question: "É necessário quebrar a parede para consertar um registro emperrado?",
+        answer: "Em quase todos os casos, a substituição do reparo ou do castelo do registro resolve o vazamento sem precisar quebrar azulejos."
       }
     ]
   }

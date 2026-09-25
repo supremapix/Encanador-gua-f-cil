@@ -111,7 +111,7 @@ export const App: React.FC = () => {
 
     const path = rawPath || '/';
 
-    // Helper to normalize strings for comparison (removes accents/diacritics & non-alphanumeric)
+    // Helper to normalize strings for comparison
     const normalize = (str: string) =>
       str
         .toLowerCase()
@@ -119,25 +119,6 @@ export const App: React.FC = () => {
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "");
-
-    // Known Location & Service Aliases for legacy URLs
-    const LOCATION_ALIASES: Record<string, string> = {
-      'batel-soho': 'batel',
-      'batel-curitiba': 'batel',
-      'centro-batel': 'batel',
-      'bairro-batel': 'batel',
-      'agua-verde-curitiba': 'agua-verde',
-      'cidade-industrial': 'cidade-industrial-curitiba',
-      'cic': 'cidade-industrial-curitiba',
-      'ecoville': 'mossungue',
-      'champagnat': 'bigorrilho',
-      'centro-civico': 'centro-civico',
-      'alto-da-xv': 'alto-da-rua-xv',
-      'alto-da-rua-15': 'alto-da-rua-xv',
-      'sjp': 'sao-jose-dos-pinhais',
-      'sao-jose': 'sao-jose-dos-pinhais',
-      'sao-jose-pinhais': 'sao-jose-dos-pinhais'
-    };
 
     // Static Legacy URL Aliases Map
     const LEGACY_STATIC_MAP: Record<string, string> = {
@@ -202,8 +183,8 @@ export const App: React.FC = () => {
     // Direct Static Pages Match
     if (path === '' || path === '/') return <HomePage />;
     if (path === '/servicos') return <ServicesIndexPage />;
-    if (path === '/encanador-curitiba') return <CuritibaPage />;
-    if (path === '/encanador-cic') return <CicPage />;
+    if (path === '/desentupidora-curitiba' || path === '/encanador-curitiba') return <CuritibaPage />;
+    if (path === '/desentupidora-cic' || path === '/encanador-cic') return <CicPage />;
     if (path === '/bairros') return <BairrosIndexPage />;
     if (path === '/regioes') return <RegioesIndexPage />;
     if (path === '/cidades') return <CidadesIndexPage />;
@@ -214,222 +195,145 @@ export const App: React.FC = () => {
     if (path === '/termos-de-uso') return <TermsPage />;
     if (path === '/sitemap') return <SitemapHtmlPage />;
 
-    // Extract potential candidate slug from various legacy URL patterns
-    let candidateSlug = path;
-    const prefixesToStrip = [
-      '/bairro/',
-      '/bairros/',
-      '/regiao/',
-      '/regioes/',
-      '/vila/',
-      '/vilas/',
-      '/cidade/',
-      '/cidades/',
-      '/servico/',
-      '/servicos/',
-      '/encanador-em-',
-      '/encanador-no-',
-      '/encanador-na-',
-      '/encanador-',
-      '/desentupidora-',
-      '/caca-vazamento-',
-      '/bairro-',
-      '/regiao-',
-      '/cidade-',
-      '/atendimento/',
-      '/local/',
-      '/locais/'
-    ];
-
-    for (const prefix of prefixesToStrip) {
-      if (candidateSlug.startsWith(prefix)) {
-        candidateSlug = candidateSlug.slice(prefix.length);
-        break;
+    // Service Detail Route Match (/servicos/:slug)
+    if (path.startsWith('/servicos/')) {
+      const serviceSlug = path.replace('/servicos/', '');
+      const matchedService = PLUMBING_SERVICES.find((s) => {
+        const sSlug = normalize(s.slug);
+        const candidate = normalize(serviceSlug);
+        return sSlug === candidate || sSlug.replace(/-/g, '') === candidate.replace(/-/g, '');
+      });
+      if (matchedService) {
+        return <ServiceDetailPage service={matchedService} />;
       }
     }
 
-    // Clean common location suffixes like -curitiba, -pr, -rmc, -curitiba-pr
-    candidateSlug = candidateSlug
-      .replace(/-(curitiba-pr|curitiba|pr|rmc)$/i, '')
-      .replace(/^bairro-/i, '')
-      .replace(/^cidade-/i, '');
-
-    let normCandidate = normalize(candidateSlug);
-
-    // Apply location alias mapping if available
-    if (LOCATION_ALIASES[normCandidate]) {
-      normCandidate = LOCATION_ALIASES[normCandidate];
-    }
-
-    // 1. Try finding matching Bairro in CURITIBA_NEIGHBORHOODS (75 Bairros)
-    const normNoHyphen = normCandidate.replace(/-/g, '');
-    const matchedBairro = CURITIBA_NEIGHBORHOODS.find((b) => {
-      const bSlug = normalize(b.slug);
-      const bName = normalize(b.name);
-      return (
-        bSlug === normCandidate ||
-        bName === normCandidate ||
-        bSlug.replace(/-/g, '') === normNoHyphen ||
-        bName.replace(/-/g, '') === normNoHyphen
-      );
-    });
-
-    if (matchedBairro) {
-      const canonicalPath = `/bairro/${matchedBairro.slug}`;
-      if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
-        window.history.replaceState({}, '', canonicalPath);
+    // Bairro Detail Route Match (/bairro/:slug)
+    if (path.startsWith('/bairro/')) {
+      const bairroSlug = path.replace('/bairro/', '');
+      const candidate = normalize(bairroSlug);
+      const matchedBairro = CURITIBA_NEIGHBORHOODS.find((b) => {
+        const bSlug = normalize(b.slug);
+        const bName = normalize(b.name);
+        return bSlug === candidate || bName === candidate;
+      });
+      if (matchedBairro) {
+        return (
+          <LocationPage
+            name={matchedBairro.name}
+            slug={matchedBairro.slug}
+            locationType="bairro"
+            officialName={`${matchedBairro.name}, Curitiba - PR`}
+            regionOrParent={`Região ${matchedBairro.region} de Curitiba`}
+            title={`Desentupidora no Bairro ${matchedBairro.name} em Curitiba | Água Fácil`}
+            description={`Desentupidora no bairro ${matchedBairro.name}, Curitiba. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura com saída técnica da CIC.`}
+            intro={`Precisa de desentupidora no bairro ${matchedBairro.name} em Curitiba? A Água Fácil Desentupidora atende residências, condomínios e estabelecimentos comerciais no ${matchedBairro.name} com total transparência e agilidade.`}
+            geoContext={`O bairro ${matchedBairro.name} fica na Região ${matchedBairro.region} de Curitiba. Atendemos chamados no ${matchedBairro.name} com deslocamento direto a partir de nossa sede na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
+            highlights={[
+              `Desentupimento de pias, vasos sanitários e ralos no ${matchedBairro.name}`,
+              `Desobstrução de redes de esgoto e caixas de gordura`,
+              `Equipamentos industriais roto-rooter sem danificar tubulações`,
+              `Diagnóstico prévio e orçamento sem surpresas`
+            ]}
+            nearbyAreas={['Água Verde', 'Portão', 'CIC', 'Batel', 'Centro', 'Novo Mundo', 'Boqueirão']}
+            faq={[
+              {
+                question: `A Água Fácil atende emergências de desentupimento no bairro ${matchedBairro.name}?`,
+                answer: `Sim! Atendemos chamados no bairro ${matchedBairro.name} para desentupimento de pias, vasos, ralos e caixas de gordura.`
+              },
+              {
+                question: `De onde sai a equipe técnica para o ${matchedBairro.name}?`,
+                answer: `Os profissionais saem da nossa base operacional na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood} diretamente para o bairro ${matchedBairro.name}.`
+              }
+            ]}
+            canonical={`${COMPANY_DATA.baseUrl}/bairro/${matchedBairro.slug}`}
+          />
+        );
       }
-      return (
-        <LocationPage
-          name={matchedBairro.name}
-          slug={matchedBairro.slug}
-          locationType="bairro"
-          officialName={`${matchedBairro.name}, Curitiba - PR`}
-          regionOrParent={`Região ${matchedBairro.region} de Curitiba`}
-          title={`Encanador no Bairro ${matchedBairro.name} em Curitiba`}
-          description={`Serviços de encanador no bairro ${matchedBairro.name}, Curitiba. Atendimento ágil para vazamentos, troca de registros e reparos hidráulicos com saída técnica da CIC.`}
-          intro={`Precisa de encanador no bairro ${matchedBairro.name} em Curitiba? A Encanador Água Fácil 24H atende residências, apartamentos e comércios no ${matchedBairro.name} com transparência técnica.`}
-          geoContext={`O bairro ${matchedBairro.name} está localizado na Região ${matchedBairro.region} de Curitiba. Atendemos chamados no ${matchedBairro.name} com rápida saída técnica da nossa base operacional na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
-          highlights={[
-            `Atendimento para casas e condomínios no ${matchedBairro.name}`,
-            `Conserto imediato de vazamentos de água em canos e registros`,
-            `Troca de torneiras, reparo de descargas e louças sanitárias`,
-            `Diagnóstico hidráulico sem quebra desnecessária`
-          ]}
-          nearbyAreas={[
-            'Água Verde', 'Portão', 'CIC', 'Batel', 'Centro', 'Novo Mundo', 'Boqueirão'
-          ]}
-          faq={[
-            {
-              question: `A empresa atende emergências no bairro ${matchedBairro.name}?`,
-              answer: `Sim! Atendemos chamados urgentes de encanador no ${matchedBairro.name} para contenção de vazamentos e trocas de registros.`
-            },
-            {
-              question: `Qual a origem do atendimento para o ${matchedBairro.name}?`,
-              answer: `Os profissionais saem da nossa base operacional na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood} diretamente para o bairro ${matchedBairro.name}.`
-            }
-          ]}
-          canonical={`${COMPANY_DATA.baseUrl}/bairro/${matchedBairro.slug}`}
-        />
-      );
     }
 
-    // 2. Try finding matching Vila / Popular Area in POPULAR_AREAS (e.g. Caiuá, Vila Sandra)
-    const matchedPopular = POPULAR_AREAS.find((p) => {
-      const pSlug = normalize(p.slug);
-      const pName = normalize(p.name);
-      return (
-        pSlug === normCandidate ||
-        pName === normCandidate ||
-        pSlug.replace(/-/g, '') === normNoHyphen ||
-        pName.replace(/-/g, '') === normNoHyphen
-      );
-    });
-
-    if (matchedPopular) {
-      const canonicalPath = `/regioes/${matchedPopular.slug}`;
-      if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
-        window.history.replaceState({}, '', canonicalPath);
+    // Cidade Detail Route Match (/cidade/:slug)
+    if (path.startsWith('/cidade/')) {
+      const citySlug = path.replace('/cidade/', '');
+      const candidate = normalize(citySlug);
+      const matchedCity = SERVICE_CITIES.find((c) => {
+        const cSlug = normalize(c.slug);
+        const cName = normalize(c.name);
+        return cSlug === candidate || cName === candidate;
+      });
+      if (matchedCity) {
+        return (
+          <LocationPage
+            name={matchedCity.name}
+            slug={matchedCity.slug}
+            locationType="cidade"
+            officialName={`${matchedCity.name} - PR`}
+            regionOrParent="Região Metropolitana de Curitiba"
+            title={`Desentupidora em ${matchedCity.name} PR | Água Fácil`}
+            description={`Atendimento de desentupidora em ${matchedCity.name} PR. Desentupimento de pias, vasos, ralos, caixa de gordura e esgoto com saída técnica de Curitiba.`}
+            intro={`Atendemos o município de ${matchedCity.name} na Região Metropolitana de Curitiba para desentupimento de pias, vasos, ralos e esgoto.`}
+            geoContext={`O município de ${matchedCity.name} faz parte da RMC. Realizamos atendimento em ${matchedCity.name} com agilidade a partir de Curitiba.`}
+            highlights={[
+              `Desentupimento residencial e comercial em ${matchedCity.name}`,
+              `Desobstrução de pias, vasos sanitários e caixas de gordura`,
+              `Equipamentos elétricos roto-rooter de alta eficiência`,
+              `Pré-orçamento orientativo via WhatsApp`
+            ]}
+            nearbyAreas={['Curitiba', 'São José dos Pinhais', 'Pinhais', 'Araucária', 'Campo Largo']}
+            faq={[
+              {
+                question: `Vocês atendem todos os bairros de ${matchedCity.name}?`,
+                answer: `Sim, prestamos atendimento em ${matchedCity.name} com deslocamento rápido a partir de nossa base em Curitiba.`
+              }
+            ]}
+            canonical={`${COMPANY_DATA.baseUrl}/cidade/${matchedCity.slug}`}
+          />
+        );
       }
-      return (
-        <LocationPage
-          name={matchedPopular.name}
-          slug={matchedPopular.slug}
-          locationType="vila"
-          officialName={`${matchedPopular.name}, Curitiba - PR`}
-          regionOrParent={matchedPopular.parentNeighborhood}
-          title={`Encanador na ${matchedPopular.name} em Curitiba`}
-          description={`Encanador na ${matchedPopular.name} (região do ${matchedPopular.parentNeighborhood}). Atendimento rápido para vazamentos, registros e reparos hidráulicos.`}
-          intro={`A Encanador Água Fácil 24H atende a comunidade da ${matchedPopular.name} no bairro ${matchedPopular.parentNeighborhood} com agilidade para vazamentos e manutenções.`}
-          geoContext={`A ${matchedPopular.name} é uma importante região popular situada no bairro ${matchedPopular.parentNeighborhood}. Nossa equipe presta serviços hidráulicos rápidos a partir da base na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
-          highlights={[
-            `Atendimento imediato para moradores da ${matchedPopular.name}`,
-            `Conserto de vazamentos e infiltrações em tubulações`,
-            `Troca e reparo de torneiras, chuveiros e válvulas`,
-            `Suporte prévio via WhatsApp com foto/vídeo`
-          ]}
-          nearbyAreas={['Vila Sandra', 'Vila Verde', 'Caiuá', 'Vitória Régia', 'Sabará']}
-          faq={[
-            {
-              question: `Qual o tempo estimado de chegada na ${matchedPopular.name}?`,
-              answer: `Devido à localização da nossa base operacional, o deslocamento para a ${matchedPopular.name} é extremamente rápido.`
-            }
-          ]}
-          canonical={`${COMPANY_DATA.baseUrl}/regioes/${matchedPopular.slug}`}
-        />
-      );
     }
 
-    // 3. Try finding matching City in SERVICE_CITIES (15 RMC Cities)
-    const matchedCity = SERVICE_CITIES.find((c) => {
-      const cSlug = normalize(c.slug);
-      const cName = normalize(c.name);
-      return (
-        cSlug === normCandidate ||
-        cName === normCandidate ||
-        cSlug.replace(/-/g, '') === normNoHyphen ||
-        cName.replace(/-/g, '') === normNoHyphen
-      );
-    });
-
-    if (matchedCity) {
-      const canonicalPath = `/cidade/${matchedCity.slug}`;
-      if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
-        window.history.replaceState({}, '', canonicalPath);
+    // Regiões Detail Route Match (/regioes/:slug)
+    if (path.startsWith('/regioes/')) {
+      const areaSlug = path.replace('/regioes/', '');
+      const candidate = normalize(areaSlug);
+      const matchedPopular = POPULAR_AREAS.find((p) => {
+        const pSlug = normalize(p.slug);
+        const pName = normalize(p.name);
+        return pSlug === candidate || pName === candidate;
+      });
+      if (matchedPopular) {
+        return (
+          <LocationPage
+            name={matchedPopular.name}
+            slug={matchedPopular.slug}
+            locationType="vila"
+            officialName={`${matchedPopular.name}, Curitiba - PR`}
+            regionOrParent={matchedPopular.parentNeighborhood}
+            title={`Desentupidora na ${matchedPopular.name} em Curitiba | Água Fácil`}
+            description={`Desentupidora na ${matchedPopular.name} (região do ${matchedPopular.parentNeighborhood}). Atendimento rápido para desentupir pias, vasos, ralos e esgoto.`}
+            intro={`A Água Fácil Desentupidora atende a comunidade da ${matchedPopular.name} no bairro ${matchedPopular.parentNeighborhood} para desentupimentos residenciais e comerciais.`}
+            geoContext={`A ${matchedPopular.name} é uma importante região situada no bairro ${matchedPopular.parentNeighborhood}. Nossa equipe presta serviços a partir da base na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
+            highlights={[
+              `Atendimento rápido para moradores da ${matchedPopular.name}`,
+              `Desentupimento mecânico de pias, vasos sanitários e ralos`,
+              `Desobstrução de caixas de gordura e redes de esgoto`,
+              `Atendimento via WhatsApp com pré-avaliação`
+            ]}
+            nearbyAreas={['Vila Sandra', 'Vila Verde', 'Caiuá', 'Vitória Régia', 'Sabará']}
+            faq={[
+              {
+                question: `Qual o tempo estimado para atendimento na ${matchedPopular.name}?`,
+                answer: `Como nossa base fica na CIC, o deslocamento para a ${matchedPopular.name} é extremamente rápido.`
+              }
+            ]}
+            canonical={`${COMPANY_DATA.baseUrl}/regioes/${matchedPopular.slug}`}
+          />
+        );
       }
-      return (
-        <LocationPage
-          name={matchedCity.name}
-          slug={matchedCity.slug}
-          locationType="cidade"
-          officialName={`${matchedCity.name} - PR`}
-          regionOrParent="Região Metropolitana de Curitiba"
-          title={`Encanador em ${matchedCity.name} PR | Atendimento Rápido`}
-          description={`Serviços de encanador em ${matchedCity.name} PR. Atendimento para residências, condomínios e indústrias com saída técnica de Curitiba.`}
-          intro={`Atendemos o município de ${matchedCity.name} na Região Metropolitana de Curitiba para conserto de vazamentos, instalações hidráulicas e manutenções gerais.`}
-          geoContext={`O município de ${matchedCity.name} faz parte da RMC. Realizamos atendimento em ${matchedCity.name} mediante deslocamento rápido a partir de Curitiba.`}
-          highlights={[
-            `Serviços de encanador residencial e comercial em ${matchedCity.name}`,
-            `Detecção e reparo rápido de vazamentos de água`,
-            `Substituição de tubulações de água fria e quente`,
-            `Instalação e regulagem de torneiras e registros`
-          ]}
-          nearbyAreas={['Curitiba', 'São José dos Pinhais', 'Pinhais', 'Araucária', 'Campo Largo']}
-          faq={[
-            {
-              question: `Vocês atendem todos os bairros de ${matchedCity.name}?`,
-              answer: `Sim, prestamos atendimento em ${matchedCity.name} em um raio de até 100 km a partir da nossa base em Curitiba.`
-            }
-          ]}
-          canonical={`${COMPANY_DATA.baseUrl}/cidade/${matchedCity.slug}`}
-        />
-      );
     }
 
-    // 4. Try finding matching Service in PLUMBING_SERVICES
-    const matchedService = PLUMBING_SERVICES.find((s) => {
-      const sSlug = normalize(s.slug);
-      const sTitle = normalize(s.title);
-      return (
-        sSlug === normCandidate ||
-        sTitle === normCandidate ||
-        sSlug.replace(/-/g, '') === normNoHyphen
-      );
-    });
-
-    if (matchedService) {
-      const canonicalPath = `/servicos/${matchedService.slug}`;
-      if (typeof window !== 'undefined' && window.location.pathname !== canonicalPath) {
-        window.history.replaceState({}, '', canonicalPath);
-      }
-      return <ServiceDetailPage service={matchedService} />;
-    }
-
-    // 5. Automatic Fallback: Any unmatched route or non-existent neighborhood/city slug redirects to Home ("/")
-    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
-      window.history.replaceState({}, '', '/');
-    }
-    return <HomePage />;
+    // CRITICAL SEO / HTTP RULE: Unmatched non-existent URLs return 404 Real NotFoundPage
+    return <NotFoundPage />;
   };
 
   return (

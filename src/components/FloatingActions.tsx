@@ -49,7 +49,7 @@ export const FloatingActions: React.FC = () => {
   };
 
   const defaultMobileImage = 'https://img.aguafacil.app.br/slider-mobile-cic-agua-facil.jpg';
-  const encodedUrl = encodeURIComponent(currentUrl || 'https://www.encanador.servicosnobairro.com.br');
+  const encodedUrl = encodeURIComponent(currentUrl || COMPANY_DATA.baseUrl);
   const encodedTitle = encodeURIComponent(`Encanador 24H em Curitiba e Região: ${pageTitle}`);
   const encodedMedia = encodeURIComponent(defaultMobileImage);
 

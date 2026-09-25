@@ -25,15 +25,16 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   faqItems = [],
   includeVideoSchema = true
 }) => {
-  // Main Plumber LocalBusiness schema
+  // Main Plumber & Drain Cleaning LocalBusiness schema
   const plumberSchema = {
     "@context": "https://schema.org",
-    "@type": "Plumber",
+    "@type": ["Plumber", "DrainCleaningService", "LocalBusiness"],
     "@id": `${COMPANY_DATA.baseUrl}/#organization`,
     "name": COMPANY_DATA.name,
     "legalName": COMPANY_DATA.legalName,
     "url": COMPANY_DATA.baseUrl,
     "telephone": COMPANY_DATA.phoneDisplay,
+    "email": COMPANY_DATA.email,
     "priceRange": "$$",
     "image": [
       COMPANY_DATA.heroImages[0].url,
@@ -47,6 +48,11 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "addressRegion": COMPANY_DATA.address.state,
       "postalCode": COMPANY_DATA.address.zipCode,
       "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.5008,
+      "longitude": -49.3325
     },
     "areaServed": [
       {

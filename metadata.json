@@ -1,6 +1,6 @@
 {
-  "name": "Encanador Água Fácil 24H",
-  "description": "Site oficial da Encanador Água Fácil 24H - Serviços de encanamento, reparos hidráulicos e atendimento em Curitiba e região metropolitana.",
+  "name": "Água Fácil Desentupidora",
+  "description": "Água Fácil Desentupidora em Curitiba e Região Metropolitana. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento pelo WhatsApp!",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

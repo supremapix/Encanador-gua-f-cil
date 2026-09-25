@@ -3,9 +3,6 @@ import path from 'path';
 import { getAllIndexableRoutes } from '../src/config/indexableRoutes';
 import { COMPANY_DATA } from '../src/data/company';
 import { PLUMBING_SERVICES } from '../src/data/services';
-import { CURITIBA_NEIGHBORHOODS } from '../src/data/curitibaNeighborhoods';
-import { POPULAR_AREAS } from '../src/data/popularAreas';
-import { SERVICE_CITIES } from '../src/data/serviceCities';
 
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 
@@ -103,17 +100,16 @@ fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
 console.log(`✅ Created public/sitemap.xml (${routes.length} URLs)`);
 
 // 3. GENERATE LLMS.TXT
-const llmsTxt = `# Encanador Água Fácil 24H - Curitiba e Região Metropolitana
+const llmsTxt = `# Água Fácil Desentupidora - Curitiba e Região Metropolitana
 
-> Serviços profissionais de encanador, manutenção hidráulica, reparo de vazamentos, troca de torneiras e registros em Curitiba (todos os 75 bairros) e Região Metropolitana. Sede na Cidade Industrial de Curitiba (CIC).
+> Serviços especializados de desentupimento de pias, vasos sanitários, ralos, rede de esgoto e caixas de gordura em Curitiba e Região Metropolitana. Sede na Cidade Industrial de Curitiba (CIC) na Rua Luiz Maltaca, 36.
 
 ## Informações do Estabelecimento
 - **Razão Social / Nome:** ${COMPANY_DATA.name}
 - **Endereço da Sede:** ${COMPANY_DATA.address.street} – ${COMPANY_DATA.address.neighborhood}, ${COMPANY_DATA.address.city}/${COMPANY_DATA.address.state} (CEP: ${COMPANY_DATA.address.zipCode})
-- **Telefone:** ${COMPANY_DATA.phoneDisplay}
-- **WhatsApp 24h:** ${COMPANY_DATA.phoneDisplay} (${COMPANY_DATA.whatsAppUrl})
-- **Horário de Funcionamento:** 24 Horas / Todos os dias da semana
-- **Valores e Promoções:** Atendimento a partir de R$ 50,00 chamando hoje.
+- **WhatsApp Atendimento:** ${COMPANY_DATA.phoneDisplay} (${COMPANY_DATA.whatsAppUrl})
+- **Telefone Fixo Central:** ${COMPANY_DATA.landlineDisplay}
+- **Horário de Funcionamento:** ${COMPANY_DATA.workingHours}
 - **Domínio Oficial:** ${siteUrl}
 
 ## Serviços Oferecidos
@@ -121,63 +117,38 @@ ${PLUMBING_SERVICES.map(
   (s) => `- [${s.title}](${siteUrl}/servicos/${s.slug}): ${s.shortDesc}`
 ).join('\n')}
 
-## Principais Páginas e Cobertura
-- [Encanador na CIC](${siteUrl}/encanador-cic): Atendimento rápido saindo da sede na Rua das Águias, 320.
-- [Encanador em Curitiba](${siteUrl}/encanador-curitiba): Cobertura técnica nos 75 bairros oficiais de Curitiba.
-- [Bairros de Curitiba](${siteUrl}/bairros): Índice completo dos 75 bairros oficiais.
-- [Vilas e Regiões Populares](${siteUrl}/regioes): Atendimento em vilas como Vila Sandra, Vila Verde, Caiuá e Vitória Régia.
-- [Cidades Atendidas na RMC](${siteUrl}/cidades): Atendimento em 15 cidades da Região Metropolitana (São José dos Pinhais, Pinhais, Araucária, Colombo, etc.).
+## Principais Páginas
+- [Desentupidora na CIC](${siteUrl}/desentupidora-cic): Atendimento saindo da sede na Rua Luiz Maltaca, 36.
+- [Desentupidora em Curitiba](${siteUrl}/desentupidora-curitiba): Cobertura nos bairros de Curitiba.
+- [Bairros de Curitiba](${siteUrl}/bairros): Guia de bairros atendidos.
+- [Cidades Atendidas na RMC](${siteUrl}/cidades): Atendimento em São José dos Pinhais, Araucária, Pinhais, Colombo e mais.
 
-## Links e Arquivos Complementares
-- [Sitemap XML](${siteUrl}/sitemap.xml): Arquivo completo do mapa do site para crawlers.
-- [LLMs Full Text](${siteUrl}/llms-full.txt): Documentação técnica e descritivo completo de todas as páginas para IAs.
+## Sitemap
+- [Sitemap XML](${siteUrl}/sitemap.xml): Arquivo do mapa do site com ${routes.length} URLs ativas com resposta 200.
 `;
 
 fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), llmsTxt, 'utf-8');
 console.log('✅ Created public/llms.txt');
 
 // 4. GENERATE LLMS-FULL.TXT
-const llmsFullTxt = `# Guia Completo de Conhecimento - Encanador Água Fácil 24H Curitiba
+const llmsFullTxt = `# Guia de Conhecimento - Água Fácil Desentupidora Curitiba
 
-## Visão Geral da Empresa
-${COMPANY_DATA.name} é uma empresa especializada em serviços hidráulicos e encanamento residencial, comercial e predial em Curitiba e Região Metropolitana.
+## Visão Geral
+${COMPANY_DATA.name} é uma empresa especializada em desentupimento e manutenção hidráulica em Curitiba e Região Metropolitana.
 
 - **Sede:** ${COMPANY_DATA.address.street} – Bairro ${COMPANY_DATA.address.neighborhood}, ${COMPANY_DATA.address.city} - ${COMPANY_DATA.address.state}, CEP ${COMPANY_DATA.address.zipCode}.
-- **Telefone / WhatsApp:** ${COMPANY_DATA.phoneDisplay}
-- **Promocional:** Orçamentos e atendimentos a partir de R$ 50,00.
-- **Diferencial:** Atendimento direto da sede na CIC para rápido deslocamento em Curitiba e RMC.
+- **WhatsApp:** ${COMPANY_DATA.phoneDisplay}
+- **Telefone Fixo:** ${COMPANY_DATA.landlineDisplay}
 
 ---
 
-## Catálogo Completo de Serviços
+## Catálogo de Serviços
 ${PLUMBING_SERVICES.map(
   (s) => `### ${s.title}
 - **URL:** ${siteUrl}/servicos/${s.slug}
 - **Descrição:** ${s.fullDesc}
-- **Problemas Comuns Solucionados:** ${s.commonProblems.join('; ')}
-- **Soluções Aplicadas:** ${s.solutions.join('; ')}
+- **Problemas Resolvidos:** ${s.commonProblems.join('; ')}
 `
-).join('\n')}
-
----
-
-## Cobertura por Cidades na Região Metropolitana de Curitiba
-${SERVICE_CITIES.map(
-  (c) => `- **${c.name}:** ${siteUrl}/cidade/${c.slug} – ${c.description}`
-).join('\n')}
-
----
-
-## Cobertura nos 75 Bairros Oficiais de Curitiba
-${CURITIBA_NEIGHBORHOODS.map(
-  (b) => `- **${b.name} (${b.region}):** ${siteUrl}/bairro/${b.slug}`
-).join('\n')}
-
----
-
-## Cobertura em Vilas e Regiões Populares
-${POPULAR_AREAS.map(
-  (a) => `- **${a.name} (${a.parentNeighborhood}):** ${siteUrl}/regioes/${a.slug}`
 ).join('\n')}
 
 ---
@@ -188,4 +159,3 @@ ${routes.map((r) => `- ${r.canonical} | ${r.title}`).join('\n')}
 
 fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsFullTxt, 'utf-8');
 console.log('✅ Created public/llms-full.txt');
-

@@ -21,4 +21,4 @@ User-agent: PerplexityBot
 Allow: /
 
 # Sitemap
-Sitemap: https://www.encanador.servicosnobairro.com.br/sitemap.xml
+Sitemap: https://www.aguafacil.app.br/sitemap.xml
