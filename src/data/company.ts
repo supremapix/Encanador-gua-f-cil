@@ -25,22 +25,22 @@ export const COMPANY_DATA = {
   },
   heroImages: [
     {
-      url: "https://img.supremasite.com.br/adp/hero-pc.webp",
-      mobileUrl: "https://img.supremasite.com.br/adp/hero-mobile.webp",
-      alt: "Desentupidora especializada em Curitiba e Região Metropolitana",
+      url: "https://img.supremasite.com.br/adp/slider-pc-agua-facil-entupiu-a-gente-resolve.webp",
+      mobileUrl: "https://img.supremasite.com.br/adp/slider-mobile-agua-facil-entupiu-a-gente-resolve.webp",
+      alt: "Desentupidora especializada em Curitiba e Região Metropolitana - Entupiu? A gente resolve!",
       title: "Desentupidora em Curitiba e Região Metropolitana",
       subtitle: "Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura com equipamentos modernos e equipe experiente."
     },
     {
-      url: "https://img.supremasite.com.br/adp/hero-pc.webp",
-      mobileUrl: "https://img.supremasite.com.br/adp/hero-mobile.webp",
+      url: "https://img.supremasite.com.br/adp/slider-pc-agua-facil-entupiu-a-gente-resolve.webp",
+      mobileUrl: "https://img.supremasite.com.br/adp/slider-mobile-agua-facil-entupiu-a-gente-resolve.webp",
       alt: "Atendimento de desentupimento na CIC e bairros de Curitiba",
       title: "Diagnóstico Preciso e Orçamento Transparente",
       subtitle: "Avaliamos o problema com honestidade e aplicamos a melhor técnica para desobstruir sem danificar tubulações."
     },
     {
-      url: "https://img.supremasite.com.br/adp/hero-pc.webp",
-      mobileUrl: "https://img.supremasite.com.br/adp/hero-mobile.webp",
+      url: "https://img.supremasite.com.br/adp/slider-pc-agua-facil-entupiu-a-gente-resolve.webp",
+      mobileUrl: "https://img.supremasite.com.br/adp/slider-mobile-agua-facil-entupiu-a-gente-resolve.webp",
       alt: "Sede da Água Fácil Desentupidora na Cidade Industrial de Curitiba",
       title: "Sede Operacional na CIC – Curitiba",
       subtitle: "Deslocamento eficiente para todos os bairros de Curitiba e municípios da RMC. Fale conosco pelo WhatsApp!"

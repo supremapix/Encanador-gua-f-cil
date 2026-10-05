@@ -68,11 +68,11 @@ function renderPageHeadAndBody(route: typeof routes[0]): { head: string; bodyHtm
     <meta property="og:description" content="${description}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:site_name" content="${COMPANY_DATA.name}" />
-    <meta property="og:image" content="https://img.supremasite.com.br/adp/hero-pc.webp" />
+    <meta property="og:image" content="https://img.supremasite.com.br/adp/slider-pc-agua-facil-entupiu-a-gente-resolve.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
-    <meta name="twitter:image" content="https://img.supremasite.com.br/adp/hero-pc.webp" />
+    <meta name="twitter:image" content="https://img.supremasite.com.br/adp/slider-pc-agua-facil-entupiu-a-gente-resolve.webp" />
     <script type="application/ld+json">${JSON.stringify(schema)}</script>
   `;
 
