@@ -117,8 +117,8 @@ export const HeroSlider: React.FC = () => {
                 />
               </picture>
 
-              {/* Scrim overlay with brand title in Barlow Condensed */}
-              <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/40 to-transparent flex items-end p-6 sm:p-10">
+              {/* Scrim overlay with brand title in Barlow Condensed (hidden on mobile to keep mobile banner clean) */}
+              <div className="hidden sm:flex absolute inset-0 z-20 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/40 to-transparent items-end p-6 sm:p-10">
                 <div className="max-w-4xl space-y-2">
                   <div className="inline-flex items-center gap-2 bg-[#FFC107] text-[#0B2545] font-heading font-black text-xs uppercase px-3 py-1 rounded-sm shadow-md">
                     <ShieldAlert className="w-4 h-4" />
