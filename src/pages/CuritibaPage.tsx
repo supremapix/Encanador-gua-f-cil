@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, ShieldCheck, ChevronRight, MessageSquare } from 'lucide-react';
+import { MapPin, ShieldAlert, ChevronRight } from 'lucide-react';
 import { EnhancedSEO } from '../components/EnhancedSEO';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { LocationSearch } from '../components/LocationSearch';
@@ -9,42 +9,42 @@ import { CURITIBA_NEIGHBORHOODS } from '../data/curitibaNeighborhoods';
 import { COMPANY_DATA } from '../data/company';
 
 export const CuritibaPage: React.FC = () => {
-  const canonical = `${COMPANY_DATA.baseUrl}/encanador-curitiba`;
-  const breadcrumbs = [{ label: 'Encanador Curitiba', href: canonical }];
+  const canonical = `${COMPANY_DATA.baseUrl}/desentupidora-curitiba`;
+  const breadcrumbs = [{ label: 'Desentupidora Curitiba', href: canonical }];
 
   return (
     <>
       <EnhancedSEO
-        title="Encanador em Curitiba PR | Atendimento nos 75 Bairros"
-        description="Atendimento de encanador em todos os 75 bairros oficiais de Curitiba. Diagnóstico preciso de vazamentos, troca de torneiras e registros com rapidez e transparência."
+        title="Desentupidora em Curitiba PR | Atendimento Rápido nos Bairros"
+        description="Desentupidora com atendimento nos bairros de Curitiba. Desentupimento mecânico de pias, vasos, ralos, esgoto e caixa de gordura com base operacional na CIC."
         canonical={canonical}
         breadcrumbs={breadcrumbs}
       />
 
-      <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <main className="min-h-screen bg-[#F2F4F7] text-slate-800 font-body py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <Breadcrumbs items={breadcrumbs} />
 
           {/* Hero */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg space-y-4">
-            <div className="inline-flex items-center gap-2 bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              <MapPin className="w-3.5 h-3.5" />
-              <span>Capital Paranaense - 75 Bairros</span>
+          <div className="bg-white border border-slate-300 rounded-md p-6 sm:p-10 shadow-sm space-y-3">
+            <div className="inline-flex items-center gap-2 bg-[#FFC107] text-[#0B2545] font-heading font-black text-xs uppercase px-3 py-1 rounded-sm shadow-xs">
+              <MapPin className="w-3.5 h-3.5 text-[#0B2545]" />
+              <span>CAPITAL PARANAENSE – 75 BAIRROS</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white">
-              Encanador em Curitiba PR – Atendimento Especializado
+            <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] uppercase tracking-wide">
+              Desentupidora em Curitiba PR – Atendimento Especializado
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-              Curitiba possui mais de 1,7 milhão de habitantes distribuídos em 75 bairros oficiais. A Encanador Água Fácil 24H possui sede física na Cidade Industrial de Curitiba (CIC) na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36</strong> e presta assistência técnica em encanamento em toda a capital paranaense.
+            <p className="text-slate-700 text-sm sm:text-base max-w-3xl leading-relaxed font-body">
+              A Água Fácil Desentupidora atende a capital paranaense com saída técnica direta de nossa sede na Cidade Industrial de Curitiba (CIC) na <strong className="text-[#0B2545]">Rua Luiz Maltaca, 36</strong>. Atendimento para desentupimento de pias, vasos, ralos, esgoto e caixas de gordura.
             </p>
 
-            <div className="p-4 bg-cyan-50 dark:bg-cyan-950/50 rounded-xl border border-cyan-200 dark:border-cyan-800 text-xs sm:text-sm text-cyan-900 dark:text-cyan-200 space-y-1">
-              <p className="font-bold flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-cyan-600" />
-                <span>Cobrimos Todos os Bairros da Capital</span>
+            <div className="p-4 bg-[#F2F4F7] rounded-md border-l-4 border-[#1368AA] border border-slate-200 text-xs sm:text-sm text-slate-800 space-y-1">
+              <p className="font-heading font-bold text-[#0B2545] flex items-center gap-1.5 uppercase">
+                <ShieldAlert className="w-4 h-4 text-[#1368AA]" />
+                <span>Cobertura em Todos os Bairros de Curitiba</span>
               </p>
-              <p>
-                Água Verde, Batel, Portão, Centro, Boqueirão, Sítio Cercado, Santa Felicidade, Pilarzinho, Cajuru e todas as regiões de Curitiba.
+              <p className="font-body text-slate-600">
+                Água Verde, Batel, Portão, Centro, Boqueirão, Sítio Cercado, Santa Felicidade, Pilarzinho, Cajuru e todas as regiões.
               </p>
             </div>
           </div>
@@ -54,24 +54,26 @@ export const CuritibaPage: React.FC = () => {
 
           {/* Contextual Video */}
           <LiteYouTube
-            contextTitle="Atendimento de Encanador em Curitiba"
-            contextText="Assista ao vídeo e veja como prestamos atendimento especializado para casas, condomínios e estabelecimentos comerciais em Curitiba."
+            contextTitle="Atendimento de Desentupidora em Curitiba"
+            contextText="Assista ao vídeo e entenda como nossa equipe atua com desentupimento mecânico e hidrojateamento em residências e comércios de Curitiba."
           />
 
           {/* Neighborhoods List Grid */}
-          <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Acesse a Página do seu Bairro em Curitiba
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+          <section className="bg-white border border-slate-300 rounded-md p-6 sm:p-8 space-y-4 shadow-xs">
+            <div className="border-b border-slate-200 pb-2">
+              <h2 className="font-heading font-black text-2xl text-[#0B2545] uppercase">
+                Acesse a Página do seu Bairro em Curitiba
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 pt-1">
               {CURITIBA_NEIGHBORHOODS.map((b) => (
                 <a
                   key={b.slug}
                   href={`/bairro/${b.slug}`}
-                  className="p-3 bg-slate-50 dark:bg-slate-800/50 hover:bg-cyan-50 dark:hover:bg-cyan-950/60 rounded-xl border border-slate-200 dark:border-slate-700/80 hover:border-cyan-500 text-xs font-bold text-slate-800 dark:text-slate-200 hover:text-cyan-900 dark:hover:text-cyan-300 transition-colors flex items-center justify-between group truncate"
+                  className="p-2.5 bg-[#F2F4F7] hover:bg-white rounded-md border border-slate-300 hover:border-[#FFC107] text-xs font-bold text-[#0B2545] hover:text-[#1368AA] transition-colors flex items-center justify-between group truncate"
                 >
                   <span className="truncate">{b.name}</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0" />
+                  <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#1368AA] shrink-0" />
                 </a>
               ))}
             </div>

@@ -1,38 +1,26 @@
-import { Heart } from "lucide-react";
+import React from 'react';
+import { Heart } from 'lucide-react';
 
 export function SupremaCredit() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-4 border-t border-slate-700/50 flex justify-center items-center">
-      <div className="rounded-full px-6 py-2.5 shadow-lg flex items-center justify-center transition-all duration-300 bg-slate-900 border border-slate-800 text-slate-200">
-        <p className="text-sm sm:text-base font-bold flex flex-wrap items-center justify-center gap-2">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-4 border-t border-[#1368AA]/30 flex justify-center items-center">
+      <div className="bg-[#0B2545] border border-[#1368AA]/40 rounded-full px-6 py-2.5 shadow-lg flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(19,104,170,0.3)]">
+        <p className="text-slate-200 hover:text-white transition-colors duration-200 text-sm sm:text-base font-bold flex flex-wrap items-center justify-center gap-2">
           <span className="opacity-90">Desenvolvido com</span>
-
-          <Heart
-            size={14}
-            aria-hidden="true"
-            className="text-red-500 motion-safe:animate-pulse shrink-0"
-          />
-
+          <Heart size={14} className="text-red-500 animate-[pulse_1.5s_infinite] shrink-0 filter drop-shadow-[0_0_3px_rgba(239,68,68,0.7)]" />
           <span className="opacity-90">por</span>
-
           <a
             id="developer-suprema-link"
             href="https://supremasite.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-black inline-flex items-center gap-2 cursor-pointer border-b border-dashed border-cyan-400 hover:text-cyan-300 transition-all text-white"
-            aria-label="Acessar o site da Suprema Sites Express"
+            className="text-[#FFC107] hover:text-amber-300 transition-all font-black inline-flex items-center gap-2 cursor-pointer border-b border-dashed border-[#FFC107]/50 hover:border-amber-300"
           >
             Suprema Sites Express
-
             <img
               src="https://img.supremamidia.com/suprema-img.png"
-              alt="Suprema Sites Express"
-              width="90"
-              height="18"
-              loading="lazy"
-              decoding="async"
-              className="h-[18px] w-auto inline select-none shrink-0"
+              alt="Suprema"
+              className="h-[18px] w-auto inline select-none shrink-0 filter drop-shadow-[0_0_2px_rgba(250,204,21,0.5)] transition-transform duration-300 hover:scale-110"
               referrerPolicy="no-referrer"
             />
           </a>

@@ -51,6 +51,8 @@ export interface PlumbingService {
   shortDesc: string;
   fullDesc: string;
   iconName: string;
+  imageUrl: string;
+  imageAlt: string;
   features: string[];
   commonProblems: string[];
   solutions: string[];

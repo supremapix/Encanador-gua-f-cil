@@ -7,6 +7,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Desobstrução rápida de pias de cozinha e lavatórios com remoção completa de gordura e restos alimentares.",
     fullDesc: "O entupimento de pias de cozinha e banheiros é causado principalmente pelo acúmulo gradual de gordura, óleos, restos de comida e borra de café nos sifões e tubulações de esgoto. A Água Fácil realiza o desentupimento de pia com raspagem interna mecânica e limpeza de sifão, restaurando o fluxo total de água sem utilizar produtos químicos corrosivos que danificam canos de PVC.",
     iconName: "Pipette",
+    imageUrl: "https://img.supremasite.com.br/adp/desentupimento-de-rede-de-esgoto-curitiba.webp",
+    imageAlt: "Desentupimento de Pia em Curitiba - Água Fácil 24H",
     features: [
       "Raspagem técnica mecânica da tubulação de esgoto da pia",
       "Limpeza e higienização completa do sifão e conexões",
@@ -42,6 +44,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Remoção de obstruções em vasos sanitários sem quebrar a louça nem danificar o anel de vedação.",
     fullDesc: "Vasos sanitários entupidos exigem atendimento ágil e higiênico. A Água Fácil utiliza desentupidoras rotativas com ponteiras especiais desenvolvidas para navegar curvas de vasos e ramais de esgoto sanitário sem arranhar a porcelana ou danificar vedações. Resolvemos bloqueios provocados por acúmulo de papel higiênico, sabonete, objetos caindo na bacia e obstruções no ramal principal.",
     iconName: "ShowerHead",
+    imageUrl: "https://img.supremasite.com.br/adp/desentupimento-de-pia-cozinha-curitiba.webp",
+    imageAlt: "Desentupimento de Vaso Sanitário em Curitiba - Água Fácil 24H",
     features: [
       "Desobstrução limpa e higiênica sem sujeira no banheiro",
       "Equipamentos roto-rooter com proteção para não danificar a porcelana",
@@ -77,6 +81,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Desobstrução de ralos de banheiro, box, sacadas, quintais e áreas de serviço.",
     fullDesc: "Ralos travados no box do banheiro ou na lavanderia causam alagamentos incômodos e riscos de infiltração nos pisos e apartamentos vizinhos. Nosso serviço de desentupimento de ralo remove bolos de fios de cabelo, restos de sabão mineralizado, areia, folhas e sujeira acumulada nas caixas sifonadas e tubulações de escoamento.",
     iconName: "Droplet",
+    imageUrl: "https://img.supremasite.com.br/adp/troca-de-torneiras-e-registros.webp",
+    imageAlt: "Desentupimento de Ralo em Curitiba - Água Fácil 24H",
     features: [
       "Limpeza e desobstrução de caixas sifonadas e grelhas",
       "Remoção de cabelos, pelos de pets e acúmulos de sabão",
@@ -108,6 +114,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Desobstrução da rede principal de esgoto, caixas de inspeção, prumadas e ramais externos.",
     fullDesc: "Entupimentos na tubulação principal de esgoto provocam transbordamento simultâneo em vasos, ralos e pias do imóvel. A Água Fácil conta com máquinas elétricas desentupidoras de alta potência (K-50 e K-500) equipadas com cabos industriais de longa extensão para desentupir redes de esgoto residenciais, prediais e comerciais com total eficiência.",
     iconName: "ShieldAlert",
+    imageUrl: "https://img.supremasite.com.br/adp/caca-vazamentos-e-reparos-hidraulicos.webp",
+    imageAlt: "Desentupimento de Rede de Esgoto em Curitiba - Água Fácil 24H",
     features: [
       "Desobstrução de redes de esgoto prediais, comerciais e residenciais",
       "Limpeza e desobstrução de caixas de inspeção e gordura",
@@ -139,6 +147,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Raspagem, remoção de placas de gordura e desobstrução dos ramais de entrada e saída da caixa de gordura.",
     fullDesc: "A caixa de gordura retém os resíduos gordurosos vindos das pias para proteger a rede pública de esgoto. Quando satura, a gordura se solidifica em grandes blocos, travando a passagem de água da cozinha. A Água Fácil realiza a limpeza, raspagem manual e mecânica e desobstrução dos tubos da caixa de gordura em residências, restaurantes e condomínios.",
     iconName: "Settings",
+    imageUrl: "https://img.supremasite.com.br/adp/desentupimento-de-vaso-sanitario-curitiba.webp",
+    imageAlt: "Limpeza de Caixa de Gordura em Curitiba - Água Fácil 24H",
     features: [
       "Remoção e raspagem de blocos de gordura solidificada",
       "Desentupimento do tubo defletor e dos ramais de entrada/saída",
@@ -170,6 +180,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Diagnóstico e conserto de vazamentos em tubulações, torneiras e registros com teste de estanqueidade.",
     fullDesc: "Infiltrações e vazamentos invisíveis causam desperdício de água e danos estruturais nas paredes e pisos. Nossa equipe realiza a detecção do ponto de vazamento e o conserto rápido de tubulações de PVC, PPR e cobre em residências e comércios.",
     iconName: "Wrench",
+    imageUrl: "https://img.supremasite.com.br/adp/desentupimento-de-ralo-banheiro-quintal.webp",
+    imageAlt: "Caça Vazamentos e Reparos Hidráulicos em Curitiba - Água Fácil 24H",
     features: [
       "Identificação visual e testes de vazamento em paredes e pisos",
       "Substituição de conexões, joelhos e trechos de tubos danificados",
@@ -201,6 +213,8 @@ export const PLUMBING_SERVICES: PlumbingService[] = [
     shortDesc: "Instalação e conserto de torneiras, registros de gaveta/pressão e reparos de descarga.",
     fullDesc: "Torneiras pingando e registros com vazamento no miolo causam desperdício contínuo. Realizamos a troca de reparos internos, vedações, substituição de reparos de válvulas de descarga Hydra e Docol e instalação de novos metais hidráulicos.",
     iconName: "CheckCircle",
+    imageUrl: "https://img.supremasite.com.br/adp/limpeza-de-caixa-de-gordura-residencial.webp",
+    imageAlt: "Troca de Torneiras e Registros em Curitiba - Água Fácil 24H",
     features: [
       "Instalação de torneiras monocomando, misturadores e filtros",
       "Substituição de reparos de registro gaveta e pressão",

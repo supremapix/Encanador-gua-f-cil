@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, ShieldCheck, CheckCircle2, ChevronRight, Wrench, AlertTriangle, Building2, Navigation } from 'lucide-react';
+import { MapPin, Phone, ShieldAlert, CheckCircle2, ChevronRight, MessageSquare, AlertTriangle, Building2, Navigation } from 'lucide-react';
 import { EnhancedSEO } from './EnhancedSEO';
 import { Breadcrumbs } from './Breadcrumbs';
 import { LiteYouTube } from './LiteYouTube';
@@ -50,6 +50,11 @@ export const LocationPage: React.FC<LocationPageProps> = ({
     { label: name, href: canonical }
   ];
 
+  const waMessage = encodeURIComponent(
+    `Olá! Gostaria de solicitar atendimento de desentupimento em ${name}.`
+  );
+  const waUrl = `https://wa.me/${COMPANY_DATA.phoneRaw}?text=${waMessage}`;
+
   return (
     <>
       <EnhancedSEO
@@ -60,107 +65,104 @@ export const LocationPage: React.FC<LocationPageProps> = ({
         faqItems={faq}
       />
 
-      <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-6 sm:py-10">
+      <main className="min-h-screen bg-[#F2F4F7] text-slate-800 font-body py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          {/* Breadcrumb Navigation */}
           <Breadcrumbs items={breadcrumbs} />
 
           {/* Hero Header */}
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
-            <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                <MapPin className="w-3.5 h-3.5" />
-                <span>{typeLabel}</span>
-              </div>
+          <div className="bg-white border border-slate-300 rounded-md p-6 sm:p-10 shadow-sm relative space-y-4">
+            <div className="inline-flex items-center gap-2 bg-[#FFC107] text-[#0B2545] font-heading font-black text-xs uppercase px-3 py-1 rounded-sm shadow-xs">
+              <MapPin className="w-3.5 h-3.5 text-[#0B2545]" />
+              <span>{typeLabel}</span>
+            </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
-                {title}
-              </h1>
+            <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] uppercase tracking-wide leading-tight">
+              {title}
+            </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-                {intro}
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-body max-w-3xl">
+              {intro}
+            </p>
+
+            <div className="p-4 bg-[#F2F4F7] rounded-md border-l-4 border-[#1368AA] border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1">
+              <p className="font-heading font-bold text-[#0B2545] flex items-center gap-1.5 uppercase text-sm">
+                <ShieldAlert className="w-4 h-4 text-[#1368AA]" />
+                <span>Atendimento Ágil com Saída da Sede na CIC Curitiba</span>
               </p>
+              <p>
+                Sede própria localizada na <strong className="text-[#0B2545]">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>. Atendemos a região de <strong className="text-[#0B2545]">{name}</strong> com rapidez técnica e consulta de disponibilidade de plantão.
+              </p>
+            </div>
 
-              {/* Geographic Disclaimer according to guidelines */}
-              <div className="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-xl border-l-4 border-cyan-600 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-1">
-                <p className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-cyan-600" />
-                  <span>Área Atendida com Saída Técnica da CIC Curitiba</span>
-                </p>
-                <p>
-                  Nossa sede técnica principal está localizada na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>. Atendemos a região de <strong className="text-slate-900 dark:text-white">{name}</strong> mediante deslocamento técnico e consulta de disponibilidade imediata.
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-                <a
-                  href={COMPANY_DATA.whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base px-6 py-3.5 rounded-xl shadow-md transition-all active:scale-95"
-                >
-                  <Wrench className="w-5 h-5" />
-                  <span>Solicitar Atendimento em {name}</span>
-                </a>
-                <a
-                  href={`tel:${COMPANY_DATA.phoneRaw}`}
-                  className="inline-flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold text-base px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-emerald-600" />
-                  <span>Ligar: {COMPANY_DATA.phoneDisplay}</span>
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0B2545] font-heading font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3 rounded-md shadow-xs transition-all active:scale-95"
+              >
+                <MessageSquare className="w-4 h-4 fill-[#0B2545]" />
+                <span>Pedir Orçamento em {name} no WhatsApp</span>
+              </a>
+              <a
+                href={`tel:${COMPANY_DATA.phoneRaw}`}
+                className="inline-flex items-center justify-center gap-2 bg-[#0B2545] hover:bg-[#07192F] text-white font-heading font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3 rounded-md border border-[#1368AA] transition-colors"
+              >
+                <Phone className="w-4 h-4 text-[#FFC107]" />
+                <span>Ligar: {COMPANY_DATA.phoneDisplay}</span>
+              </a>
             </div>
           </div>
 
-          {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            {/* Left 2 Columns: Detailed Content */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Highlights & Services */}
-              <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-6 h-6 text-cyan-600 shrink-0" />
-                  <span>Destaques do Atendimento Hidráulico em {name}</span>
-                </h2>
+              {/* Highlights */}
+              <section className="bg-white border border-slate-300 rounded-md p-6 sm:p-8 space-y-5 shadow-xs">
+                <div className="border-b border-slate-200 pb-2">
+                  <h2 className="font-heading font-black text-2xl text-[#0B2545] uppercase flex items-center gap-2">
+                    <CheckCircle2 className="w-6 h-6 text-[#1368AA]" />
+                    <span>Destaques do Atendimento em {name}</span>
+                  </h2>
+                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   {highlights.map((item, idx) => (
-                    <div key={idx} className="p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/60 flex items-start gap-2.5">
-                      <div className="w-2 h-2 rounded-full bg-cyan-600 mt-2 shrink-0" />
-                      <span className="text-sm text-slate-800 dark:text-slate-200 font-medium">{item}</span>
+                    <div key={idx} className="p-3 bg-[#F2F4F7] rounded-md border border-slate-200 flex items-start gap-2 text-xs sm:text-sm font-bold text-slate-800">
+                      <div className="w-2 h-2 rounded-full bg-[#1368AA] mt-1.5 shrink-0" />
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3">
-                    Geografia e Contexto do Atendimento Local
+                <div className="pt-3 border-t border-slate-200">
+                  <h3 className="font-heading font-bold text-lg text-[#0B2545] uppercase mb-1">
+                    Geografia e Contexto do Atendimento
                   </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
                     {geoContext}
                   </p>
                 </div>
               </section>
 
-              {/* Available Services Grid */}
-              <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Serviços Oferecidos para {name}
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Services Grid */}
+              <section className="bg-white border border-slate-300 rounded-md p-6 sm:p-8 space-y-4 shadow-xs">
+                <div className="border-b border-slate-200 pb-2">
+                  <h2 className="font-heading font-black text-2xl text-[#0B2545] uppercase">
+                    Serviços Disponíveis para {name}
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   {PLUMBING_SERVICES.map((serv) => (
                     <a
                       key={serv.slug}
                       href={`/servicos/${serv.slug}`}
-                      className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500 bg-slate-50 dark:bg-slate-800/40 hover:bg-white dark:hover:bg-slate-800 transition-all group space-y-2 block"
+                      className="p-3.5 rounded-md border border-slate-200 bg-[#F2F4F7] hover:bg-white hover:border-[#FFC107] transition-all group space-y-1 block"
                     >
-                      <h3 className="font-bold text-base text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 flex items-center justify-between">
+                      <h3 className="font-heading font-bold text-base text-[#0B2545] group-hover:text-[#1368AA] flex items-center justify-between uppercase">
                         <span>{serv.title}</span>
-                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-600" />
+                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#1368AA]" />
                       </h3>
-                      <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+                      <p className="text-xs text-slate-600 line-clamp-2 font-body">
                         {serv.shortDesc}
                       </p>
                     </a>
@@ -168,38 +170,40 @@ export const LocationPage: React.FC<LocationPageProps> = ({
                 </div>
               </section>
 
-              {/* Useful Guidelines before calling */}
-              <section className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 rounded-2xl p-6 space-y-3 text-amber-900 dark:text-amber-200">
-                <div className="flex items-center gap-2 font-bold text-base text-amber-900 dark:text-amber-100">
+              {/* Guidelines */}
+              <section className="bg-amber-50 border border-amber-300 rounded-md p-6 space-y-2 text-amber-950 font-body">
+                <div className="flex items-center gap-2 font-heading font-extrabold text-base text-amber-900 uppercase">
                   <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
-                  <span>Orientações Úteis em Caso de Vazamento em {name}</span>
+                  <span>Orientações Úteis em Caso de Entupimento</span>
                 </div>
-                <ul className="text-xs sm:text-sm space-y-2 list-disc list-inside text-amber-800 dark:text-amber-300">
-                  <li><strong>Feche o registro geral:</strong> Se houver vazamento ativo em torneiras, canos ou sanitários, feche o registro do seu imóvel imediatamente para estancar a água.</li>
-                  <li><strong>Verifique se há infiltrações visíveis:</strong> Manchas na pintura ou estufamentos em azulejos indicam umidade acumulada na parede.</li>
-                  <li><strong>Fale conosco pelo WhatsApp:</strong> Envie uma foto ou pequeno vídeo do local para recebermos o diagnóstico prévio e agilizarmos o atendimento.</li>
+                <ul className="text-xs sm:text-sm space-y-1.5 list-disc list-inside text-amber-900">
+                  <li><strong>Não use produtos químicos corrosivos:</strong> Soda cáustica deforma tubulações de PVC e petrifica a gordura.</li>
+                  <li><strong>Evite tentar cutucar com arames rígidos:</strong> Cabos improvisados podem perfurar a tubulação ou travar no cano.</li>
+                  <li><strong>Envie foto ou vídeo no WhatsApp:</strong> Facilita a pré-avaliação do nosso técnico para indicação do equipamento.</li>
                 </ul>
               </section>
 
-              {/* Contextual Video Embed */}
+              {/* Video */}
               <LiteYouTube
-                contextTitle={`Atendimento de Encanador em ${name}`}
-                contextText={`Veja como prestamos suporte para moradores e estabelecimentos de ${name} e toda a região de Curitiba com transparência e rapidez.`}
+                contextTitle={`Atendimento de Desentupidora em ${name}`}
+                contextText={`Veja como prestamos suporte para moradores e estabelecimentos de ${name} e toda a região de Curitiba.`}
               />
 
-              {/* Local FAQs */}
+              {/* FAQ */}
               {faq.length > 0 && (
-                <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xs space-y-6">
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                    Perguntas Frequentes sobre Atendimento em {name}
-                  </h2>
-                  <div className="space-y-4">
+                <section className="bg-white border border-slate-300 rounded-md p-6 sm:p-8 space-y-4 shadow-xs">
+                  <div className="border-b border-slate-200 pb-2">
+                    <h2 className="font-heading font-black text-2xl text-[#0B2545] uppercase">
+                      Perguntas Frequentes sobre Atendimento em {name}
+                    </h2>
+                  </div>
+                  <div className="space-y-3 pt-1">
                     {faq.map((item, idx) => (
-                      <div key={idx} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/60 space-y-1.5">
-                        <h3 className="font-bold text-base text-slate-900 dark:text-white">
+                      <div key={idx} className="p-4 bg-[#F2F4F7] rounded-md border border-slate-200 space-y-1">
+                        <h3 className="font-heading font-bold text-base text-[#0B2545] uppercase">
                           {item.question}
                         </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
                           {item.answer}
                         </p>
                       </div>
@@ -208,19 +212,19 @@ export const LocationPage: React.FC<LocationPageProps> = ({
                 </section>
               )}
 
-              {/* Nearby Areas */}
+              {/* Nearby */}
               {nearbyAreas.length > 0 && (
-                <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-4">
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    <Navigation className="w-5 h-5 text-cyan-600" />
-                    <span>Outros Bairros e Regiões Próximos a {name}</span>
+                <section className="bg-white border border-slate-300 rounded-md p-6 space-y-3">
+                  <h3 className="font-heading font-bold text-lg text-[#0B2545] uppercase flex items-center gap-2">
+                    <Navigation className="w-4 h-4 text-[#1368AA]" />
+                    <span>Regiões Próximas a {name}</span>
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {nearbyAreas.map((area) => (
                       <a
                         key={area}
                         href="#local-search-section"
-                        className="px-3.5 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-cyan-100 dark:hover:bg-cyan-950 text-slate-700 dark:text-slate-300 hover:text-cyan-900 dark:hover:text-cyan-300 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 transition-colors"
+                        className="px-3 py-1.5 bg-[#F2F4F7] hover:bg-slate-200 text-slate-800 rounded-md text-xs font-bold border border-slate-300 transition-colors"
                       >
                         {area}
                       </a>
@@ -230,31 +234,31 @@ export const LocationPage: React.FC<LocationPageProps> = ({
               )}
             </div>
 
-            {/* Right Column: Contact Sidebar & Company Info */}
+            {/* Sidebar */}
             <div className="space-y-6 sticky top-20">
               <ContactForm defaultLocation={name} />
 
-              <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 space-y-4 shadow-md">
-                <div className="flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-wider">
+              <div className="bg-[#0B2545] text-white rounded-md p-6 border-2 border-[#1368AA] space-y-3 shadow-md">
+                <div className="flex items-center gap-2 text-[#FFC107] font-heading font-bold text-sm uppercase">
                   <Building2 className="w-4 h-4" />
-                  <span>Sede Oficial da Empresa</span>
+                  <span>Sede da Empresa</span>
                 </div>
-                <h4 className="font-extrabold text-lg text-white">
-                  Encanador Água Fácil 24H
+                <h4 className="font-heading font-black text-lg text-white uppercase">
+                  Água Fácil Desentupidora
                 </h4>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Endereço Oficial:<br />
+                <p className="text-xs text-slate-300 leading-relaxed font-body">
+                  Endereço Físico:<br />
                   <strong className="text-white">{COMPANY_DATA.address.street}</strong><br />
                   {COMPANY_DATA.address.neighborhood}<br />
                   {COMPANY_DATA.address.city} – {COMPANY_DATA.address.state}<br />
                   CEP {COMPANY_DATA.address.zipCode}
                 </p>
-                <div className="pt-2 border-t border-slate-800 flex flex-col gap-2">
+                <div className="pt-2 border-t border-[#1368AA]/40 flex flex-col gap-2 font-heading font-bold text-xs uppercase">
                   <a
                     href={`tel:${COMPANY_DATA.phoneRaw}`}
-                    className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 px-4 rounded-lg transition-colors border border-slate-700"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#07192F] hover:bg-[#1368AA]/40 text-white py-2.5 px-4 rounded-md transition-colors border border-[#1368AA]"
                   >
-                    <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                    <Phone className="w-3.5 h-3.5 text-[#FFC107]" />
                     <span>Ligar para {COMPANY_DATA.phoneDisplay}</span>
                   </a>
                 </div>

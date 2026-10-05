@@ -1,10 +1,71 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --color-navy-dark: #0B2545;
+    --color-water-blue: #1368AA;
+    --color-signal-yellow: #FFC107;
+    --color-light-bg: #F2F4F7;
+    --color-whatsapp: #25D366;
+  }
+
   html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F2F4F7;
+    color: #1E293B;
   }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+.font-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Diagonal Warning Stripe Divider (Fita de Sinalização) */
+.warning-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FFC107,
+    #FFC107 14px,
+    #0B2545 14px,
+    #0B2545 28px
+  );
+}
+
+.warning-stripe-sm {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FFC107,
+    #FFC107 8px,
+    #0B2545 8px,
+    #0B2545 16px
+  );
+}
+
+/* Atendimento 24h Tag Badge */
+.tag-24h {
+  background-color: #FFC107;
+  color: #0B2545;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
 }
 
 /* Custom scrollbar for data tables and lists */
@@ -26,23 +87,3 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 116, 139, 0.5);
 }
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 22s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-

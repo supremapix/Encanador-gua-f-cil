@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, MapPin, Phone, ShieldCheck } from 'lucide-react';
+import { Building2, ShieldAlert } from 'lucide-react';
 import { EnhancedSEO } from '../components/EnhancedSEO';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ContactForm } from '../components/ContactForm';
@@ -13,47 +13,49 @@ export const SobrePage: React.FC = () => {
   return (
     <>
       <EnhancedSEO
-        title="Sobre a Empresa | Encanador Água Fácil 24H na CIC Curitiba"
-        description="Conheça a Encanador Água Fácil 24H, localizada na Rua Luiz Maltaca, 36 – CIC. Especialista em reparos hidráulicos e atendimento ágil em Curitiba e RMC."
+        title="Sobre a Empresa | Água Fácil Desentupidora Curitiba"
+        description="Conheça a Água Fácil Desentupidora, sediada na Rua Luiz Maltaca, 36 – CIC. Empresa especializada em desentupimento e manutenção hidráulica em Curitiba e RMC."
         canonical={canonical}
         breadcrumbs={breadcrumbs}
       />
 
-      <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <main className="min-h-screen bg-[#F2F4F7] text-slate-800 font-body py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <Breadcrumbs items={breadcrumbs} />
 
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg space-y-4">
-            <div className="inline-flex items-center gap-2 bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              <Building2 className="w-3.5 h-3.5" />
-              <span>Nossa História e Compromisso</span>
+          <div className="bg-white border border-slate-300 rounded-md p-6 sm:p-10 shadow-sm space-y-3">
+            <div className="inline-flex items-center gap-2 bg-[#FFC107] text-[#0B2545] font-heading font-black text-xs uppercase px-3 py-1 rounded-sm shadow-xs">
+              <Building2 className="w-3.5 h-3.5 text-[#0B2545]" />
+              <span>NOSSA ESTRUTURA OPERACIONAL</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white">
-              Sobre a Encanador Água Fácil 24H
+            <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] uppercase tracking-wide">
+              Sobre a Água Fácil Desentupidora
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
-              Com sede técnica localizada na <strong className="text-slate-900 dark:text-white">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>, atuamos no segmento de instalações e reparos hidráulicos para residências, condomínios e estabelecimentos comerciais.
+            <p className="text-slate-700 text-sm sm:text-base max-w-3xl leading-relaxed font-body">
+              Sediada na <strong className="text-[#0B2545]">Rua Luiz Maltaca, 36, CIC (Cidade Industrial), Curitiba - PR, CEP 81310-060</strong>, atuamos com desentupimento mecânico e manutenção hidráulica para residências, condomínios e estabelecimentos comerciais.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2 space-y-6">
-              <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xs">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                  <ShieldCheck className="w-6 h-6 text-cyan-600" />
-                  <span>Compromisso com a Qualidade Técnica</span>
-                </h2>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Trabalhamos com foco no diagnóstico preciso dos problemas de vazamento e desgaste de tubulações, evitando intervenções desnecessárias ou quebras de alvenaria desmedidas.
+              <section className="bg-white border border-slate-300 rounded-md p-6 sm:p-8 space-y-3 shadow-xs">
+                <div className="border-b border-slate-200 pb-2">
+                  <h2 className="font-heading font-black text-2xl text-[#0B2545] uppercase flex items-center gap-2">
+                    <ShieldAlert className="w-6 h-6 text-[#1368AA]" />
+                    <span>Compromisso com o Cliente e Transparência</span>
+                  </h2>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
+                  Nossos técnicos atuam com máquinas industriais roto-rooter e hidrojateamento, realizando a desobstrução mecânica limpa sem quebrar pisos ou paredes sem necessidade.
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Respeitamos as características específicas de cada imóvel, seja um apartamento antigo no Centro de Curitiba, um sobrado novo no Água Verde ou uma empresa na Cidade Industrial de Curitiba.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body">
+                  Prestamos suporte nos 75 bairros de Curitiba e municípios da Região Metropolitana com orçamentos prévios claros e honestos.
                 </p>
               </section>
 
               <LiteYouTube
-                contextTitle="Conheça Nossos Serviços"
-                contextText="Assista ao vídeo explicativo sobre nosso padrão de atendimento e suporte técnico na região de Curitiba."
+                contextTitle="Conheça Nossos Serviços Operacionais"
+                contextText="Assista ao vídeo e veja a atuação da Água Fácil Desentupidora em Curitiba."
               />
             </div>
 
