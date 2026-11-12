@@ -48,8 +48,8 @@
 
 ---
 
-## Lista Completa de URLs Indexáveis (48 Páginas)
-- https://www.aguafacil.app.br/ | Desentupidora em Curitiba | Água Fácil Desentupidora 24H
+## Lista Completa de URLs Indexáveis (125 Páginas)
+- https://www.aguafacil.app.br/ | Encanador em Curitiba | Água Fácil Serviços Hidráulicos
 - https://www.aguafacil.app.br/servicos | Serviços de Desentupimento em Curitiba | Água Fácil Desentupidora
 - https://www.aguafacil.app.br/desentupidora-curitiba | Desentupidora em Curitiba PR | Atendimento Rápido nos Bairros
 - https://www.aguafacil.app.br/desentupidora-cic | Desentupidora na CIC Curitiba | Sede na Rua Luiz Maltaca
@@ -69,31 +69,108 @@
 - https://www.aguafacil.app.br/servicos/desentupimento-caixa-de-gordura | Desentupimento e Limpeza de Caixa de Gordura em Curitiba | Água Fácil Desentupidora
 - https://www.aguafacil.app.br/servicos/reparo-vazamentos | Caça Vazamentos e Reparos Hidráulicos em Curitiba | Água Fácil Desentupidora
 - https://www.aguafacil.app.br/servicos/troca-torneiras-registros | Troca de Torneiras e Registros em Curitiba | Água Fácil Desentupidora
-- https://www.aguafacil.app.br/bairro/cidade-industrial-curitiba | Desentupidora no Bairro Cidade Industrial de Curitiba (CIC) em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/batel | Desentupidora no Bairro Batel em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/agua-verde | Desentupidora no Bairro Água Verde em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/portao | Desentupidora no Bairro Portão em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/centro | Desentupidora no Bairro Centro em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/boqueirao | Desentupidora no Bairro Boqueirão em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/sitio-cercado | Desentupidora no Bairro Sítio Cercado em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/pinheirinho | Desentupidora no Bairro Pinheirinho em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/santa-felicidade | Desentupidora no Bairro Santa Felicidade em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/bigorrilho | Desentupidora no Bairro Bigorrilho em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/cajuru | Desentupidora no Bairro Cajuru em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/taruma | Desentupidora no Bairro Tarumã em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/capao-raso | Desentupidora no Bairro Capão Raso em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/uberaba | Desentupidora no Bairro Uberaba em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/xaxim | Desentupidora no Bairro Xaxim em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/bairro/novo-mundo | Desentupidora no Bairro Novo Mundo em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/cidade/sao-jose-dos-pinhais | Desentupidora em São José dos Pinhais PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/araucaria | Desentupidora em Araucária PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/pinhais | Desentupidora em Pinhais PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/colombo | Desentupidora em Colombo PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/campo-largo | Desentupidora em Campo Largo PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/fazenda-rio-grande | Desentupidora em Fazenda Rio Grande PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/piraquara | Desentupidora em Piraquara PR | Água Fácil
-- https://www.aguafacil.app.br/cidade/almirante-tamandare | Desentupidora em Almirante Tamandaré PR | Água Fácil
-- https://www.aguafacil.app.br/regioes/caiua | Desentupidora na Caiuá em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/regioes/vila-sandra | Desentupidora na Vila Sandra em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/regioes/vila-verde | Desentupidora na Vila Verde em Curitiba | Água Fácil
-- https://www.aguafacil.app.br/regioes/vitoria-regia | Desentupidora na Vitória Régia em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/abranches | Encanador no Abranches em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/agua-verde | Encanador no Água Verde em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/ahu | Encanador no Ahú em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/alto-boqueirao | Encanador no Alto Boqueirão em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/alto-da-gloria | Encanador no Alto da Glória em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/alto-da-rua-xv | Encanador no Alto da Rua XV em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/atuba | Encanador no Atuba em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/augusta | Encanador no Bairro Augusta em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/bacacheri | Encanador no Bacacheri em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/bairro-alto | Encanador no Bairro Alto em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/barreirinha | Encanador na Barreirinha em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/batel | Encanador no Batel em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/bigorrilho | Encanador no Bigorrilho (Champagnat) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/boa-vista | Encanador no Boa Vista em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/bom-retiro | Encanador no Bom Retiro em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/boqueirao | Encanador no Boqueirão em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/butiatuvinha | Encanador no Butiatuvinha em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/cabral | Encanador no Cabral em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/cachoeira | Encanador no Bairro Cachoeira em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/cajuru | Encanador no Cajuru em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/campina-do-siqueira | Encanador na Campina do Siqueira em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/campo-comprido | Encanador no Campo Comprido em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/campo-de-santana | Encanador no Campo de Santana em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/capao-raso | Encanador no Capão Raso em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/capao-da-imbuia | Encanador no Capão da Imbuia em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/cascatinha | Encanador no Bairro Cascatinha em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/caximba | Encanador na Caximba em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/centro | Encanador no Centro de Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/centro-civico | Encanador no Centro Cívico em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/cidade-industrial-curitiba | Encanador na Cidade Industrial de Curitiba – CIC | Água Fácil
+- https://www.aguafacil.app.br/bairro/cristo-rei | Encanador no Cristo Rei em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/fanny | Encanador no Bairro Fanny em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/fazendinha | Encanador no Bairro Fazendinha em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/ganchinho | Encanador no Ganchinho em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/guabirotuba | Encanador no Guabirotuba em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/guaira | Encanador no Bairro Guaíra em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/hauer | Encanador no Hauer em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/hugo-lange | Encanador no Hugo Lange em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/jardim-botanico | Encanador no Jardim Botânico em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/jardim-social | Encanador no Jardim Social em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/jardim-das-americas | Encanador no Jardim das Américas em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/juveve | Encanador no Juvevê em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/lamenha-pequena | Encanador em Lamenha Pequena em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/lindoia | Encanador no Bairro Lindóia em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/merces | Encanador nas Mercês em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/mossungue | Encanador no Mossunguê (Ecoville) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/novo-mundo | Encanador no Novo Mundo em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/orleans | Encanador no Orleans em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/parolin | Encanador no Parolin em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/pilarzinho | Encanador no Pilarzinho em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/pinheirinho | Encanador no Pinheirinho em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/portao | Encanador no Portão em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/prado-velho | Encanador no Prado Velho em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/reboucas | Encanador no Rebouças em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/riviera | Encanador no Bairro Riviera em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/santa-candida | Encanador no Santa Cândida em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/santa-felicidade | Encanador em Santa Felicidade em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/santa-quiteria | Encanador em Santa Quitéria em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/santo-inacio | Encanador no Santo Inácio em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/seminario | Encanador no Seminário em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sitio-cercado | Encanador no Sítio Cercado em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sao-braz | Encanador no São Braz em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sao-francisco | Encanador no São Francisco em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sao-joao | Encanador no Bairro São João em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sao-lourenco | Encanador no São Lourenço em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/sao-miguel | Encanador no Bairro São Miguel em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/taboao | Encanador no Taboão em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/taruma | Encanador no Tarumã em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/tatuquara | Encanador no Tatuquara em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/tingui | Encanador no Bairro Tingui em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/uberaba | Encanador no Uberaba em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/umbara | Encanador no Umbará em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/vila-izabel | Encanador na Vila Izabel em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/vista-alegre | Encanador no Vista Alegre em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/bairro/xaxim | Encanador no Xaxim em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/cidade/sao-jose-dos-pinhais | Encanador em São José dos Pinhais | Água Fácil
+- https://www.aguafacil.app.br/cidade/pinhais | Encanador em Pinhais | Água Fácil
+- https://www.aguafacil.app.br/cidade/colombo | Encanador em Colombo | Água Fácil
+- https://www.aguafacil.app.br/cidade/araucaria | Encanador em Araucária | Água Fácil
+- https://www.aguafacil.app.br/cidade/almirante-tamandare | Encanador em Almirante Tamandaré | Água Fácil
+- https://www.aguafacil.app.br/cidade/campo-largo | Encanador em Campo Largo | Água Fácil
+- https://www.aguafacil.app.br/cidade/campo-magro | Encanador em Campo Magro | Água Fácil
+- https://www.aguafacil.app.br/cidade/fazenda-rio-grande | Encanador em Fazenda Rio Grande | Água Fácil
+- https://www.aguafacil.app.br/cidade/quatro-barras | Encanador em Quatro Barras | Água Fácil
+- https://www.aguafacil.app.br/cidade/campina-grande-do-sul | Encanador em Campina Grande do Sul | Água Fácil
+- https://www.aguafacil.app.br/cidade/mandirituba | Encanador em Mandirituba | Água Fácil
+- https://www.aguafacil.app.br/cidade/balsa-nova | Encanador em Balsa Nova | Água Fácil
+- https://www.aguafacil.app.br/cidade/rio-branco-do-sul | Encanador em Rio Branco do Sul | Água Fácil
+- https://www.aguafacil.app.br/cidade/itaperucu | Encanador em Itaperuçu | Água Fácil
+- https://www.aguafacil.app.br/cidade/tijucas-do-sul | Encanador em Tijucas do Sul | Água Fácil
+- https://www.aguafacil.app.br/regioes/vila-sandra | Encanador na Vila Sandra (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/vila-verde | Encanador na Vila Verde (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/vila-nossa-senhora-da-luz | Encanador na Vila Nossa Senhora da Luz (CIC) | Água Fácil
+- https://www.aguafacil.app.br/regioes/vitoria-regia | Encanador no Vitória Régia (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/caiua | Encanador no Caiuá (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/sabara | Encanador no Sabará (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/gabineto | Encanador no Gabineto (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/itatiaia | Encanador no Itatiaia (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/santa-helena | Encanador na Vila Santa Helena (CIC) | Água Fácil
+- https://www.aguafacil.app.br/regioes/neoville | Encanador no Neoville (CIC) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/vila-torres | Encanador na Vila Torres em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/vila-osternack | Encanador no Osternack (Ganchinho) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/jardim-da-ordem | Encanador no Jardim da Ordem (Tatuquara) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/regioes/carmo | Encanador na Região do Carmo (Boqueirão) em Curitiba | Água Fácil
+- https://www.aguafacil.app.br/guia-de-localidades | Encanadores: bairros e referências de endereço | Água Fácil

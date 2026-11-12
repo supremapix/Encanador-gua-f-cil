@@ -1,3 +1,6 @@
+import { CURITIBA_NEIGHBORHOODS } from '../data/curitibaNeighborhoods';
+import { SERVICE_CITIES } from '../data/serviceCities';
+import { POPULAR_AREAS } from '../data/popularAreas';
 import { PLUMBING_SERVICES } from '../data/services';
 
 export interface RouteMeta {
@@ -15,9 +18,9 @@ export function getAllIndexableRoutes(): RouteMeta[] {
   const routes: RouteMeta[] = [
     {
       path: "/",
-      title: "Desentupidora em Curitiba | Água Fácil Desentupidora 24H",
+      title: "Encanador em Curitiba | Água Fácil Serviços Hidráulicos",
       description: "Água Fácil Desentupidora em Curitiba e Região Metropolitana. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento pelo WhatsApp!",
-      h1: "Desentupidora em Curitiba – Água Fácil",
+      h1: "Encanador em Curitiba – Água Fácil",
       canonical: `${BASE}/`,
       type: "home"
     },
@@ -131,78 +134,18 @@ export function getAllIndexableRoutes(): RouteMeta[] {
     });
   });
 
-  // Verified High-Priority Curitiba Bairro Hubs (16 key neighborhoods with verified logistic routing)
-  const KEY_BAIRROS = [
-    { slug: 'cidade-industrial-curitiba', name: 'Cidade Industrial de Curitiba (CIC)', region: 'Sul / Oeste' },
-    { slug: 'batel', name: 'Batel', region: 'Central' },
-    { slug: 'agua-verde', name: 'Água Verde', region: 'Central / Sul' },
-    { slug: 'portao', name: 'Portão', region: 'Sul' },
-    { slug: 'centro', name: 'Centro', region: 'Central' },
-    { slug: 'boqueirao', name: 'Boqueirão', region: 'Sul' },
-    { slug: 'sitio-cercado', name: 'Sítio Cercado', region: 'Sul' },
-    { slug: 'pinheirinho', name: 'Pinheirinho', region: 'Sul' },
-    { slug: 'santa-felicidade', name: 'Santa Felicidade', region: 'Norte / Oeste' },
-    { slug: 'bigorrilho', name: 'Bigorrilho', region: 'Oeste' },
-    { slug: 'cajuru', name: 'Cajuru', region: 'Leste' },
-    { slug: 'taruma', name: 'Tarumã', region: 'Leste' },
-    { slug: 'capao-raso', name: 'Capão Raso', region: 'Sul' },
-    { slug: 'uberaba', name: 'Uberaba', region: 'Leste' },
-    { slug: 'xaxim', name: 'Xaxim', region: 'Sul' },
-    { slug: 'novo-mundo', name: 'Novo Mundo', region: 'Sul' },
-  ];
-
-  KEY_BAIRROS.forEach(b => {
-    routes.push({
-      path: `/bairro/${b.slug}`,
-      title: `Desentupidora no Bairro ${b.name} em Curitiba | Água Fácil`,
-      description: `Serviços de desentupimento de pias, vasos, ralos e esgoto no bairro ${b.name} em Curitiba. Atendimento rápido saindo da base na CIC.`,
-      h1: `Desentupidora no Bairro ${b.name} em Curitiba`,
-      canonical: `${BASE}/bairro/${b.slug}`,
-      type: "neighborhood_detail"
-    });
-  });
-
-  // Verified RMC City Hubs (8 key RMC cities)
-  const KEY_CITIES = [
-    { slug: 'sao-jose-dos-pinhais', name: 'São José dos Pinhais' },
-    { slug: 'araucaria', name: 'Araucária' },
-    { slug: 'pinhais', name: 'Pinhais' },
-    { slug: 'colombo', name: 'Colombo' },
-    { slug: 'campo-largo', name: 'Campo Largo' },
-    { slug: 'fazenda-rio-grande', name: 'Fazenda Rio Grande' },
-    { slug: 'piraquara', name: 'Piraquara' },
-    { slug: 'almirante-tamandare', name: 'Almirante Tamandaré' }
-  ];
-
-  KEY_CITIES.forEach(c => {
-    routes.push({
-      path: `/cidade/${c.slug}`,
-      title: `Desentupidora em ${c.name} PR | Água Fácil`,
-      description: `Atendimento de desentupidora em ${c.name} PR. Desentupimento de pias, vasos sanitários, ralos, caixa de gordura e esgoto.`,
-      h1: `Desentupidora em ${c.name} – PR`,
-      canonical: `${BASE}/cidade/${c.slug}`,
-      type: "city_detail"
-    });
-  });
-
-  // Verified Popular Area Hubs (4 key areas)
-  const KEY_AREAS = [
-    { slug: 'caiua', name: 'Caiuá', parent: 'CIC' },
-    { slug: 'vila-sandra', name: 'Vila Sandra', parent: 'CIC' },
-    { slug: 'vila-verde', name: 'Vila Verde', parent: 'CIC' },
-    { slug: 'vitoria-regia', name: 'Vitória Régia', parent: 'CIC' }
-  ];
-
-  KEY_AREAS.forEach(a => {
-    routes.push({
-      path: `/regioes/${a.slug}`,
-      title: `Desentupidora na ${a.name} em Curitiba | Água Fácil`,
-      description: `Atendimento de desentupidora na ${a.name} (${a.parent}). Saída rápida da base na CIC para desentupir pias, vasos, ralos e esgoto.`,
-      h1: `Desentupidora na ${a.name} (${a.parent})`,
-      canonical: `${BASE}/regioes/${a.slug}`,
-      type: "region_detail"
-    });
-  });
+  for (const [items, prefix, type] of [
+    [CURITIBA_NEIGHBORHOODS, 'bairro', 'neighborhood_detail'],
+    [SERVICE_CITIES, 'cidade', 'city_detail'],
+    [POPULAR_AREAS, 'regioes', 'region_detail']
+  ] as const) {
+    items.filter(item => item.indexable).forEach(item => routes.push({
+      path: `/${prefix}/${item.slug}`, title: `${item.title.split('|')[0].trim()} | Água Fácil`,
+      description: item.description, h1: item.title.split('|')[0].trim(),
+      canonical: `${BASE}/${prefix}/${item.slug}`, type
+    }));
+  }
+  routes.push({path: '/guia-de-localidades', title: 'Encanadores: bairros e referências de endereço | Água Fácil', description: 'Guia de bairros, nomes populares e referências de transporte para solicitar encanador em Curitiba e região. Fontes municipais e orientação para informar o endereço.', h1: 'Encanador: informe a localidade certa', canonical: `${BASE}/guia-de-localidades`, type: 'institutional'});
 
   return routes;
 }

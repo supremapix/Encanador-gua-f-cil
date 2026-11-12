@@ -15,7 +15,7 @@ export const HeroSlider: React.FC = () => {
   const touchEndX = useRef<number | null>(null);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const timer = setInterval(() => {
       setProgress((prevProgress) => {

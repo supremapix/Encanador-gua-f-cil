@@ -4,6 +4,7 @@ import { EnhancedSEO } from './EnhancedSEO';
 import { Breadcrumbs } from './Breadcrumbs';
 import { LiteYouTube } from './LiteYouTube';
 import { ContactForm } from './ContactForm';
+import { LocalHelp } from './LocalHelp';
 import { COMPANY_DATA } from '../data/company';
 import { PLUMBING_SERVICES } from '../data/services';
 
@@ -51,7 +52,7 @@ export const LocationPage: React.FC<LocationPageProps> = ({
   ];
 
   const waMessage = encodeURIComponent(
-    `Olá! Gostaria de solicitar atendimento de desentupimento em ${name}.`
+    `Olá! Preciso de encanador em ${name}. Posso enviar detalhes do problema?`
   );
   const waUrl = `https://wa.me/${COMPANY_DATA.phoneRaw}?text=${waMessage}`;
 
@@ -77,7 +78,7 @@ export const LocationPage: React.FC<LocationPageProps> = ({
             </div>
 
             <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] uppercase tracking-wide leading-tight">
-              {title}
+              {title.split('|')[0].trim()}
             </h1>
 
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-body max-w-3xl">
@@ -114,6 +115,7 @@ export const LocationPage: React.FC<LocationPageProps> = ({
             </div>
           </div>
 
+          <LocalHelp name={name} slug={slug} locationType={locationType} regionOrParent={regionOrParent} />
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2 space-y-8">
               {/* Highlights */}

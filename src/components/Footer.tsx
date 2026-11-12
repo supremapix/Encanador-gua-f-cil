@@ -178,7 +178,8 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Suprema Credit Component */}
-        <SupremaCredit />
+        <div className="py-4"><a href="/guia-de-localidades" className="underline font-bold">Guia de bairros e referências de endereço</a></div>
+      <SupremaCredit />
       </div>
     </footer>
   );

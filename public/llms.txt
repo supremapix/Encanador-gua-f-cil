@@ -26,4 +26,4 @@
 - [Cidades Atendidas na RMC](https://www.aguafacil.app.br/cidades): Atendimento em São José dos Pinhais, Araucária, Pinhais, Colombo e mais.
 
 ## Sitemap
-- [Sitemap XML](https://www.aguafacil.app.br/sitemap.xml): Arquivo do mapa do site com 48 URLs ativas com resposta 200.
+- [Sitemap XML](https://www.aguafacil.app.br/sitemap.xml): Arquivo do mapa do site com 125 URLs ativas com resposta 200.

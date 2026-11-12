@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && tsx scripts/generateSeoFiles.ts && tsx scripts/prerender.ts",
+    "build": "node --import tsx scripts/generateSeoFiles.ts && vite build && node --import tsx scripts/prerender.ts",
     "start": "tsx server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",

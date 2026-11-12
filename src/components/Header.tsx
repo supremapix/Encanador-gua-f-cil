@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0B2545] text-white shadow-md">
+    <header className="sticky top-0 z-[70] bg-[#0B2545] text-white shadow-md">
       {/* Top Banner Bar with Warning Stripe Accent */}
       <div className="bg-[#07192F] text-slate-200 text-xs sm:text-sm py-1.5 px-4 border-b border-[#1368AA]/30">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5">
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-4 text-xs font-semibold">
             <span className="tag-24h text-[11px] py-0.5 px-2">
               <Clock className="w-3 h-3 text-[#0B2545]" />
-              PLANTÃO 24H
+              PLANTÃO SOB CONSULTA
             </span>
             <a
               href={`tel:${COMPANY_DATA.phoneRaw}`}

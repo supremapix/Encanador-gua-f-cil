@@ -226,19 +226,19 @@ export const POPULAR_AREAS: PopularAreaData[] = [
     slug: "vila-osternack",
     type: "popular_area",
     official: false,
-    parentNeighborhood: "Sítio Cercado",
-    nearbyAreas: ["Sítio Cercado", "Ganchinho", "Umbará"],
-    title: "Encanador no Osternack (Sítio Cercado) em Curitiba | Serviços de Encanador",
-    description: "Encanador no Osternack, Sítio Cercado em Curitiba. Reparos em vazamentos, pias e tubulações.",
-    intro: "O Osternack é um tradicional loteamento habitacional no Sítio Cercado. Prestamos atendimento residencial para sanar problemas no abastecimento e escoamento de água.",
+    parentNeighborhood: "Ganchinho",
+    nearbyAreas: ["Ganchinho", "Sítio Cercado", "Umbará"],
+    title: "Encanador no Osternack (Ganchinho) em Curitiba | Serviços de Encanador",
+    description: "Encanador no Osternack, Ganchinho em Curitiba. Reparos em vazamentos, pias e tubulações.",
+    intro: "O nome Osternack é usado como referência local na região de Ganchinho; confirme rua e CEP no pedido. Prestamos atendimento residencial para sanar problemas no abastecimento e escoamento de água.",
     highlights: ["Atendimento para casas e comércios no Osternack", "Conserto de vazamento de canos e registros", "Instalação de pias e tanques"],
     faq: [
       {
-        question: "Atendem no Osternack no Sítio Cercado?",
-        answer: "Sim, cobrimos todas as quadras do setor Osternack no Sítio Cercado."
+        question: "Atendem no Osternack no Ganchinho?",
+        answer: "Informe a rua, o CEP e a referência Osternack para consultar disponibilidade e combinar o atendimento."
       }
     ],
-    geoContext: "Setor residencial do bairro Sítio Cercado na Zona Sul.",
+    geoContext: "Referência local na Zona Sul; a unidade municipal de saúde Osternack fica em Ganchinho.",
     indexable: true
   },
   {

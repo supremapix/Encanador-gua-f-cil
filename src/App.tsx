@@ -23,10 +23,11 @@ import { PLUMBING_SERVICES } from './data/services';
 import { CURITIBA_NEIGHBORHOODS } from './data/curitibaNeighborhoods';
 import { POPULAR_AREAS } from './data/popularAreas';
 import { SERVICE_CITIES } from './data/serviceCities';
+import { LocalityGuide } from './pages/LocalityGuide';
 import { COMPANY_DATA } from './data/company';
 
-export const App: React.FC = () => {
-  const [currentPath, setCurrentPath] = useState(() => window.location.pathname + window.location.search + window.location.hash);
+export const App: React.FC<{initialPath?: string; helmetContext?: object}> = ({initialPath, helmetContext}) => {
+  const [currentPath, setCurrentPath] = useState(() => initialPath ?? (typeof window === 'undefined' ? '/' : window.location.pathname + window.location.search + window.location.hash));
 
   useEffect(() => {
     const handlePopState = () => {
@@ -36,7 +37,7 @@ export const App: React.FC = () => {
     // Handle internal link clicks without full reload for smooth SPA experience
     const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a');
-      if (!target) return;
+      if (!target || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || target.hasAttribute('download')) return;
 
       const href = target.getAttribute('href');
       if (!href) return;
@@ -101,6 +102,7 @@ export const App: React.FC = () => {
   const renderContent = () => {
     // Normalize path by stripping search params, hash, trailing slash, .html/.php extensions and converting to lowercase
     let rawPath = (currentPath || '/').split('?')[0].split('#')[0].toLowerCase();
+    try { rawPath = decodeURIComponent(rawPath); } catch { /* Invalid URL uses not-found page. */ }
     
     // Remove .html or .php trailing extensions if present
     rawPath = rawPath.replace(/(\.html|\.php)$/i, '');
@@ -182,6 +184,7 @@ export const App: React.FC = () => {
 
     // Direct Static Pages Match
     if (path === '' || path === '/') return <HomePage />;
+    if (path === '/guia-de-localidades') return <LocalityGuide />;
     if (path === '/servicos') return <ServicesIndexPage />;
     if (path === '/desentupidora-curitiba' || path === '/encanador-curitiba') return <CuritibaPage />;
     if (path === '/desentupidora-cic' || path === '/encanador-cic') return <CicPage />;
@@ -225,27 +228,13 @@ export const App: React.FC = () => {
             locationType="bairro"
             officialName={`${matchedBairro.name}, Curitiba - PR`}
             regionOrParent={`Região ${matchedBairro.region} de Curitiba`}
-            title={`Desentupidora no Bairro ${matchedBairro.name} em Curitiba | Água Fácil`}
-            description={`Desentupidora no bairro ${matchedBairro.name}, Curitiba. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura com saída técnica da CIC.`}
-            intro={`Precisa de desentupidora no bairro ${matchedBairro.name} em Curitiba? A Água Fácil Desentupidora atende residências, condomínios e estabelecimentos comerciais no ${matchedBairro.name} com total transparência e agilidade.`}
-            geoContext={`O bairro ${matchedBairro.name} fica na Região ${matchedBairro.region} de Curitiba. Atendemos chamados no ${matchedBairro.name} com deslocamento direto a partir de nossa sede na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
-            highlights={[
-              `Desentupimento de pias, vasos sanitários e ralos no ${matchedBairro.name}`,
-              `Desobstrução de redes de esgoto e caixas de gordura`,
-              `Equipamentos industriais roto-rooter sem danificar tubulações`,
-              `Diagnóstico prévio e orçamento sem surpresas`
-            ]}
-            nearbyAreas={['Água Verde', 'Portão', 'CIC', 'Batel', 'Centro', 'Novo Mundo', 'Boqueirão']}
-            faq={[
-              {
-                question: `A Água Fácil atende emergências de desentupimento no bairro ${matchedBairro.name}?`,
-                answer: `Sim! Atendemos chamados no bairro ${matchedBairro.name} para desentupimento de pias, vasos, ralos e caixas de gordura.`
-              },
-              {
-                question: `De onde sai a equipe técnica para o ${matchedBairro.name}?`,
-                answer: `Os profissionais saem da nossa base operacional na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood} diretamente para o bairro ${matchedBairro.name}.`
-              }
-            ]}
+            title={`${matchedBairro.title.split('|')[0].trim()} | Água Fácil`}
+            description={matchedBairro.description}
+            intro={matchedBairro.intro}
+            geoContext={matchedBairro.geoContext}
+            highlights={matchedBairro.highlights}
+            nearbyAreas={matchedBairro.nearbyAreas}
+            faq={matchedBairro.faq}
             canonical={`${COMPANY_DATA.baseUrl}/bairro/${matchedBairro.slug}`}
           />
         );
@@ -269,23 +258,13 @@ export const App: React.FC = () => {
             locationType="cidade"
             officialName={`${matchedCity.name} - PR`}
             regionOrParent="Região Metropolitana de Curitiba"
-            title={`Desentupidora em ${matchedCity.name} PR | Água Fácil`}
-            description={`Atendimento de desentupidora em ${matchedCity.name} PR. Desentupimento de pias, vasos, ralos, caixa de gordura e esgoto com saída técnica de Curitiba.`}
-            intro={`Atendemos o município de ${matchedCity.name} na Região Metropolitana de Curitiba para desentupimento de pias, vasos, ralos e esgoto.`}
-            geoContext={`O município de ${matchedCity.name} faz parte da RMC. Realizamos atendimento em ${matchedCity.name} com agilidade a partir de Curitiba.`}
-            highlights={[
-              `Desentupimento residencial e comercial em ${matchedCity.name}`,
-              `Desobstrução de pias, vasos sanitários e caixas de gordura`,
-              `Equipamentos elétricos roto-rooter de alta eficiência`,
-              `Pré-orçamento orientativo via WhatsApp`
-            ]}
-            nearbyAreas={['Curitiba', 'São José dos Pinhais', 'Pinhais', 'Araucária', 'Campo Largo']}
-            faq={[
-              {
-                question: `Vocês atendem todos os bairros de ${matchedCity.name}?`,
-                answer: `Sim, prestamos atendimento em ${matchedCity.name} com deslocamento rápido a partir de nossa base em Curitiba.`
-              }
-            ]}
+            title={`${matchedCity.title.split('|')[0].trim()} | Água Fácil`}
+            description={matchedCity.description}
+            intro={matchedCity.intro}
+            geoContext={matchedCity.geoContext}
+            highlights={matchedCity.highlights}
+            nearbyAreas={matchedCity.nearbyCities}
+            faq={matchedCity.faq}
             canonical={`${COMPANY_DATA.baseUrl}/cidade/${matchedCity.slug}`}
           />
         );
@@ -309,23 +288,13 @@ export const App: React.FC = () => {
             locationType="vila"
             officialName={`${matchedPopular.name}, Curitiba - PR`}
             regionOrParent={matchedPopular.parentNeighborhood}
-            title={`Desentupidora na ${matchedPopular.name} em Curitiba | Água Fácil`}
-            description={`Desentupidora na ${matchedPopular.name} (região do ${matchedPopular.parentNeighborhood}). Atendimento rápido para desentupir pias, vasos, ralos e esgoto.`}
-            intro={`A Água Fácil Desentupidora atende a comunidade da ${matchedPopular.name} no bairro ${matchedPopular.parentNeighborhood} para desentupimentos residenciais e comerciais.`}
-            geoContext={`A ${matchedPopular.name} é uma importante região situada no bairro ${matchedPopular.parentNeighborhood}. Nossa equipe presta serviços a partir da base na ${COMPANY_DATA.address.street}, ${COMPANY_DATA.address.neighborhood}.`}
-            highlights={[
-              `Atendimento rápido para moradores da ${matchedPopular.name}`,
-              `Desentupimento mecânico de pias, vasos sanitários e ralos`,
-              `Desobstrução de caixas de gordura e redes de esgoto`,
-              `Atendimento via WhatsApp com pré-avaliação`
-            ]}
-            nearbyAreas={['Vila Sandra', 'Vila Verde', 'Caiuá', 'Vitória Régia', 'Sabará']}
-            faq={[
-              {
-                question: `Qual o tempo estimado para atendimento na ${matchedPopular.name}?`,
-                answer: `Como nossa base fica na CIC, o deslocamento para a ${matchedPopular.name} é extremamente rápido.`
-              }
-            ]}
+            title={`${matchedPopular.title.split('|')[0].trim()} | Água Fácil`}
+            description={matchedPopular.description}
+            intro={matchedPopular.intro}
+            geoContext={matchedPopular.geoContext}
+            highlights={matchedPopular.highlights}
+            nearbyAreas={matchedPopular.nearbyAreas}
+            faq={matchedPopular.faq}
             canonical={`${COMPANY_DATA.baseUrl}/regioes/${matchedPopular.slug}`}
           />
         );
@@ -338,7 +307,7 @@ export const App: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <Layout>{renderContent()}</Layout>
       </HelmetProvider>
     </ErrorBoundary>

@@ -26,8 +26,8 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <EnhancedSEO
-        title="Desentupidora em Curitiba | Água Fácil Desentupidora 24H"
-        description="Água Fácil Desentupidora em Curitiba e Região Metropolitana. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento pelo WhatsApp!"
+        title="Encanador em Curitiba | Água Fácil Serviços Hidráulicos"
+        description="Água Fácil Encanador em Curitiba e Região Metropolitana. Desentupimento de pias, vasos sanitários, ralos, esgoto e caixas de gordura. Sede na CIC (Rua Luiz Maltaca, 36). Solicite orçamento pelo WhatsApp!"
         canonical={`${COMPANY_DATA.baseUrl}/`}
         faqItems={GLOBAL_FAQS}
       />
@@ -35,6 +35,11 @@ export const HomePage: React.FC = () => {
       <main className="min-h-screen bg-[#F2F4F7] text-slate-800 font-body">
         {/* Main Hero Slider */}
         <HeroSlider />
+        <section className="agua-guide-intro max-w-7xl mx-auto p-6">
+          <h2 className="text-2xl font-bold">Encanadores para vazamentos, registros e instalações</h2>
+          <p>Água que não para de escorrer, registro travado ou pia sem vazão? Conte à Água Fácil o que mudou no uso da água. Diferenciamos o reparo de encanamento do desentupimento para orientar o próximo passo. Envie o bairro, a rua e uma foto, se for seguro, antes de combinar a visita.</p>
+          <a className="underline font-bold" href="/guia-de-localidades">Consulte bairros, nomes populares e referências para informar seu endereço</a>
+        </section>
 
         {/* PROOF METRICS BAR (Chegamos em até 30 min | 24h Todos os Dias | Orçamento Sem Compromisso) */}
         <section className="bg-[#0B2545] text-white border-b-2 border-[#FFC107] py-6 shadow-md">
@@ -47,7 +52,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div className="text-left">
                   <span className="font-heading font-black text-2xl sm:text-3xl text-[#FFC107] uppercase leading-none block">
-                    ATÉ 30 MINUTOS
+                    CONSULTE O PRAZO
                   </span>
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">
                     Deslocamento ágil com saída da sede na CIC
@@ -61,7 +66,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div className="text-left">
                   <span className="font-heading font-black text-2xl sm:text-3xl text-white uppercase leading-none block">
-                    24H TODOS OS DIAS
+                    PLANTÃO SOB CONSULTA
                   </span>
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">
                     Atendimento de plantão em Curitiba e RMC
@@ -108,7 +113,7 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0B2545] uppercase tracking-wide leading-none">
-                  Desentupidora em Curitiba – Água Fácil 24H
+                  Encanador em Curitiba – Água Fácil
                 </h1>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed">

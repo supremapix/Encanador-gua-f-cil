@@ -101,12 +101,16 @@
       "source": "/termos",
       "destination": "/termos-de-uso",
       "permanent": true
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/((?!api|assets|favicon|site\\.webmanifest|robots\\.txt|sitemap\\.xml).*)",
-      "destination": "/index.html"
+      "source": "/encanador-curitiba",
+      "destination": "/desentupidora-curitiba",
+      "permanent": true
+    },
+    {
+      "source": "/encanador-cic",
+      "destination": "/desentupidora-cic",
+      "permanent": true
     }
   ]
 }

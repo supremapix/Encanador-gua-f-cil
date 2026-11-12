@@ -23,12 +23,12 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   noindex = false,
   breadcrumbs = [],
   faqItems = [],
-  includeVideoSchema = true
+  includeVideoSchema = false
 }) => {
   // Main Plumber & Drain Cleaning LocalBusiness schema
   const plumberSchema = {
     "@context": "https://schema.org",
-    "@type": ["Plumber", "DrainCleaningService", "LocalBusiness"],
+    "@type": ["Plumber", "LocalBusiness"],
     "@id": `${COMPANY_DATA.baseUrl}/#organization`,
     "name": COMPANY_DATA.name,
     "legalName": COMPANY_DATA.legalName,
